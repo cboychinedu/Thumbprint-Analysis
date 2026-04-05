@@ -3,10 +3,11 @@
 # Importing the necessary modules 
 import os
 import json 
+from database.ml import MachineLearningDB
 from pymongo import MongoClient
 
 # Creating a class for handling the database connection 
-class MongoDB: 
+class MongoDB(MachineLearningDB): 
     # Initializing the class 
     def __init__(self): 
         # Creating a variable for the client, and db

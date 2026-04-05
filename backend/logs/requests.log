@@ -1,0 +1,76 @@
+2026-04-05 07:21:58 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://172.20.10.2:3001
+2026-04-05 07:21:58 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-05 07:21:58 - INFO -  * Restarting with stat
+2026-04-05 07:21:58 - WARNING -  * Debugger is active!
+2026-04-05 07:21:58 - INFO -  * Debugger PIN: 133-917-514
+2026-04-05 22:02:20 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://172.20.10.2:3001
+2026-04-05 22:02:20 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-05 22:02:20 - INFO -  * Restarting with stat
+2026-04-05 22:02:20 - WARNING -  * Debugger is active!
+2026-04-05 22:02:20 - INFO -  * Debugger PIN: 133-917-514
+2026-04-05 22:48:31 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 22:48:31 - INFO - 127.0.0.1 - - [05/Apr/2026 22:48:31] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 22:48:31 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 22:48:31 - INFO - 127.0.0.1 - - [05/Apr/2026 22:48:31] "POST /login HTTP/1.1" 200 -
+2026-04-05 22:48:45 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 22:48:45 - INFO - 127.0.0.1 - - [05/Apr/2026 22:48:45] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 22:48:45 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 22:48:45 - INFO - 127.0.0.1 - - [05/Apr/2026 22:48:45] "POST /login HTTP/1.1" 200 -
+2026-04-05 22:48:50 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 22:48:50 - INFO - 127.0.0.1 - - [05/Apr/2026 22:48:50] "POST /login HTTP/1.1" 200 -
+2026-04-05 22:58:46 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 22:58:46 - INFO - 127.0.0.1 - - [05/Apr/2026 22:58:46] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 22:58:46 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 22:58:46 - INFO - 127.0.0.1 - - [05/Apr/2026 22:58:46] "POST /login HTTP/1.1" 200 -
+2026-04-05 23:14:47 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 23:14:47 - INFO - 127.0.0.1 - - [05/Apr/2026 23:14:47] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 23:14:47 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 23:14:47 - INFO - 127.0.0.1 - - [05/Apr/2026 23:14:47] "POST /login HTTP/1.1" 200 -
+2026-04-05 23:17:28 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 23:17:28 - INFO - 127.0.0.1 - - [05/Apr/2026 23:17:28] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 23:17:28 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 23:17:28 - INFO - 127.0.0.1 - - [05/Apr/2026 23:17:28] "POST /login HTTP/1.1" 200 -
+2026-04-05 23:17:36 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 23:17:36 - INFO - 127.0.0.1 - - [05/Apr/2026 23:17:36] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 23:17:36 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 23:17:36 - INFO - 127.0.0.1 - - [05/Apr/2026 23:17:36] "POST /login HTTP/1.1" 200 -
+2026-04-05 23:19:45 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 23:19:45 - INFO - 127.0.0.1 - - [05/Apr/2026 23:19:45] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 23:19:45 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 23:19:45 - INFO - 127.0.0.1 - - [05/Apr/2026 23:19:45] "POST /login HTTP/1.1" 200 -
+2026-04-05 23:21:32 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 23:21:32 - INFO - 127.0.0.1 - - [05/Apr/2026 23:21:32] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 23:21:32 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 23:21:32 - INFO - 127.0.0.1 - - [05/Apr/2026 23:21:32] "POST /login HTTP/1.1" 200 -
+2026-04-05 23:22:16 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 23:22:16 - INFO - 127.0.0.1 - - [05/Apr/2026 23:22:16] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 23:22:16 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 23:22:16 - INFO - 127.0.0.1 - - [05/Apr/2026 23:22:16] "POST /login HTTP/1.1" 200 -
+2026-04-05 23:37:15 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 23:37:15 - INFO - 127.0.0.1 - - [05/Apr/2026 23:37:15] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 23:37:15 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 23:37:15 - INFO - 127.0.0.1 - - [05/Apr/2026 23:37:15] "POST /login HTTP/1.1" 200 -
+2026-04-05 23:39:03 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 23:39:03 - INFO - 127.0.0.1 - - [05/Apr/2026 23:39:03] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 23:39:03 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 23:39:03 - INFO - 127.0.0.1 - - [05/Apr/2026 23:39:03] "POST /login HTTP/1.1" 200 -
+2026-04-05 23:41:16 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 23:41:16 - INFO - 127.0.0.1 - - [05/Apr/2026 23:41:16] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 23:41:16 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 23:41:16 - INFO - 127.0.0.1 - - [05/Apr/2026 23:41:16] "POST /login HTTP/1.1" 200 -
+2026-04-05 23:46:42 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-05 23:46:42 - INFO - 127.0.0.1 - - [05/Apr/2026 23:46:42] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-05 23:46:42 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-05 23:46:42 - INFO - 127.0.0.1 - - [05/Apr/2026 23:46:42] "POST /login HTTP/1.1" 200 -
+2026-04-05 23:50:13 - INFO - Request: POST /dashboard/analyze - IP: 127.0.0.1
+2026-04-05 23:50:13 - WARNING - 404 Error: User tried to access /dashboard/analyze
+2026-04-05 23:50:13 - INFO - 127.0.0.1 - - [05/Apr/2026 23:50:13] "[33mPOST /dashboard/analyze HTTP/1.1[0m" 404 -
+2026-04-05 23:54:51 - INFO - Request: POST /dashboard/analyze - IP: 127.0.0.1
+2026-04-05 23:54:51 - WARNING - 404 Error: User tried to access /dashboard/analyze
+2026-04-05 23:54:51 - INFO - 127.0.0.1 - - [05/Apr/2026 23:54:51] "[33mPOST /dashboard/analyze HTTP/1.1[0m" 404 -
