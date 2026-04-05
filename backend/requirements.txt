@@ -1,0 +1,11 @@
+tensorflow 
+flask
+flask_cors
+bcrypt
+python-dotenv 
+opencv-python
+scikit-learn
+flask-socketio
+imutils
+pymongo
+PyJWT
