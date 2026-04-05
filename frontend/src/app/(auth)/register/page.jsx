@@ -28,7 +28,7 @@ export default function Register() {
     const [status, setStatus] = useState(null); 
     const [alertMessage, setAlertMessage] = useState(null); 
 
-    // Setting the state 
+    // Setting the state for the input data
     const [fullname, setFullname] = useState(""); 
     const [email, setEmail] = useState(""); 
     const [password, setPassword] = useState(""); 
@@ -119,7 +119,7 @@ export default function Register() {
                     const errorData = await response.json(); 
 
                     // Display the error message 
-                    setAlertMessage(errorData.message || "Registration failed."); 
+                    setAlertMessage(errorData.message || "Registration failed!"); 
                     setStatus("error"); 
                     setShowAlert(true); 
 
@@ -171,7 +171,7 @@ export default function Register() {
                 console.log("error: ", error.message); 
 
                 // Display the error message 
-                setAlertMessage("Error connection to the server!"); 
+                setAlertMessage("Error connecting to the server!"); 
                 setStatus("error"); 
                 setShowAlert(true); 
 
