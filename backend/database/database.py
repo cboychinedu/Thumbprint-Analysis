@@ -98,6 +98,7 @@ class MongoDB:
             "confidence": 1, 
             "latency": 1, 
             "encodedImage": 1, 
+            "timestamp": 1,
             "type": 1 
         })
         

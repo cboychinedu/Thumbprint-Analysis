@@ -95,6 +95,12 @@ const Navbar = () => {
                                     <Link href="/dashboard/history" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:text-white transition-all font-bold text-indigo-600">
                                         History
                                     </Link>
+                                    <Link href="/dashboard/profile" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:text-white transition-all font-bold text-indigo-600"> 
+                                        Profile 
+                                    </Link>
+                                    <Link href="/dashboard/settings" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:text-white transition-all font-bold text-indigo-600"> 
+                                        Settings 
+                                    </Link>
                                     <button
                                         className="bg-indigo-600 text-white px-5 py-2 rounded-[6px] text-sm font-semibold hover:bg-indigo-700 transition shadow-lg shadow-indigo-200"
                                         onClick={handleLogout}
@@ -142,7 +148,9 @@ const Navbar = () => {
                         ) : (
                             <>
                                 <Link href="/dashboard" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">Dashboard</Link>
-                                <Link href="/history" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">History</Link>
+                                <Link href="/dashboard/history" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">History</Link>
+                                <Link href="/dashboard/profile" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">Profile</Link>
+                                <Link href="/dashboard/settings" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">Settings</Link>
                                 <button
                                     onClick={handleLogout}
                                     className="w-full mt-4 bg-red-50 text-red-600 py-3 rounded-md font-bold border border-red-100"

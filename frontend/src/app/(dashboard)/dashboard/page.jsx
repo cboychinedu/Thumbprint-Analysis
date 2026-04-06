@@ -83,10 +83,11 @@ const Dashboard = () => {
   // Rendering the component JSX 
   return (
     <Fragment>
-      {/* Main Background: Pure White */}
-      <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-indigo-100">
-        <Navbar />
+      {/* Adding the navbar */}
+      <Navbar />
 
+      {/* Main Background: Pure White */}
+      <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-indigo-100 mb-[100px]">
         <main className="max-w-7xl mx-auto px-4 py-12">
           {/* Header Section */}
           <div className="mb-10 border-l-4 border-indigo-600 pl-6">
@@ -213,9 +214,10 @@ const Dashboard = () => {
             </section>
           </div>
         </main>
-
-        <Footer />
       </div>
+
+      {/* Adding the footer */}
+      <Footer />
     </Fragment>
   );
 };

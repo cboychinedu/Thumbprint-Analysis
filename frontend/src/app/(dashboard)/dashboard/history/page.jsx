@@ -5,8 +5,8 @@
 import Cookies from 'js-cookie';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
-import { Clock, User, Zap, Target, Download } from 'lucide-react';
 import React, { useEffect, useState, Fragment } from 'react';
+import { Clock, User, Zap, Target, Download } from 'lucide-react';
 
 // Creating the history component 
 const History = () => {
@@ -140,8 +140,8 @@ const History = () => {
                                             </div>
 
                                             <div className="flex justify-between items-center text-[10px] pt-3 border-t border-slate-50">
-                                                <span className="flex items-center gap-1 text-slate-300 uppercase font-mono">
-                                                    <Clock size={10} /> {item.timestamp || 'N/A'}
+                                                <span className="flex items-center gap-1 text-black uppercase font-mono">
+                                                    <Clock size={10} /> {item.timestamp}
                                                 </span>
                                                 <span className="bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter">
                                                     Success

@@ -3,6 +3,7 @@
 # Importing the necessary modules 
 import os 
 import jwt 
+import json
 import base64
 from datetime import datetime
 from database.database import db
@@ -76,6 +77,12 @@ def analyseThumbPrint():
                 # Encode the image 
                 encodedImage = base64.b64encode(imageFile.read()).decode('utf-8')
                 
+            # Get the current time 
+            now = datetime.now() 
+            
+            # Format the time 
+            formattedTime = now.strftime("%Y-%m-%d %I:%M:%S %p")
+                
             # Creating the database data
             databaseData = {
                 "email": email, 
@@ -84,6 +91,8 @@ def analyseThumbPrint():
                 "confidence": str(confidence), 
                 "latency": str(latency), 
                 "encodedImage": f"data:image/jpeg;base64,{encodedImage}", 
+                "fullname": uniqueFilename,
+                "timestamp": formattedTime,
                 "type": "image"
             }
             
@@ -96,7 +105,8 @@ def analyseThumbPrint():
                 "status": "success", 
                 "owner": str(result), 
                 "confidence": str(confidence), 
-                "latency": str(latency)
+                "latency": str(latency), 
+                "timestamp": formattedTime
             }
             
             # Returning the message 
@@ -128,6 +138,62 @@ def analyseThumbPrint():
         }
         
         # Sending back the error response 
+        return jsonify(errorResponse)
+    
+# Creating the profile page 
+@dashboard.route("/profile", methods=["GET"])
+def getUserProfile(): 
+    # Using try except block 
+    try: 
+        # Getting the user's token from the headers 
+        userToken = request.headers.get("x-auth-token")
+        decodedToken = jwt.decode(userToken, secretKey, algorithms=["HS256"])
+        email = decodedToken["email"]
+        
+        # Getting the users information from the database 
+        userData = db.getUsersInformation("users", email)
+        
+        # if the user is present, execute the block of code below 
+        if userData: 
+            # Convert the user's data into a json object 
+            userDict = json.loads(userData)
+            
+            # Remove the password before sending to the frontend 
+            userDict.pop('password', None)
+            
+            # Building the response message 
+            responseMessage = {
+                "status": "success", 
+                "user": userDict, 
+                "statusCode": 200
+            }
+            
+            # Sending the message 
+            return jsonify(responseMessage) 
+        
+        # else 
+        else: 
+            # if the user data is not present 
+            # Build a response message 
+            responseMessage = {
+                "status": "error", 
+                "message": "User not found!", 
+                "statusCode": 500
+            }
+            
+            # Sending the error message 
+            return jsonify(responseMessage)
+        
+    # Exception as error 
+    except Exception as error: 
+        # Building the error response 
+        errorResponse = {
+            "message": str(error), 
+            "status": "error", 
+            "statusCode": 500
+        }
+        
+        # Sending the error message 
         return jsonify(errorResponse)
     
 # Creating a route for getting the users history 
@@ -165,4 +231,6 @@ def getThumbprintHistory():
     except Exception as error: 
         # Display the history error 
         print(f"History Error: ", {error})
+        
+        # Return the error message
         return jsonify({ "message": str(error), "status": "error", "statusCode": 500 }) 

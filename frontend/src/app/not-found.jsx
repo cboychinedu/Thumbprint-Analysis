@@ -7,7 +7,6 @@ import Link from "next/link";
 
 // Creating the NotFound component 
 const NotFound = () => {
-
     // Rendering the not found component 
     return (
         <Fragment> 
