@@ -268,3 +268,45 @@
 2026-04-06 17:40:21 - INFO - 127.0.0.1 - - [06/Apr/2026 17:40:21] "OPTIONS /dashboard HTTP/1.1" 200 -
 2026-04-06 17:40:21 - INFO - Request: POST /dashboard - IP: 127.0.0.1
 2026-04-06 17:40:21 - INFO - 127.0.0.1 - - [06/Apr/2026 17:40:21] "POST /dashboard HTTP/1.1" 200 -
+2026-04-06 17:44:07 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/thumbPrintAnalysis/backend/database/database.py', reloading
+2026-04-06 17:44:08 - INFO -  * Restarting with stat
+2026-04-06 17:44:12 - WARNING -  * Debugger is active!
+2026-04-06 17:44:12 - INFO -  * Debugger PIN: 133-917-514
+2026-04-06 17:45:09 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://172.20.10.2:3001
+2026-04-06 17:45:09 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-06 17:45:09 - INFO -  * Restarting with stat
+2026-04-06 17:45:11 - WARNING -  * Debugger is active!
+2026-04-06 17:45:11 - INFO -  * Debugger PIN: 133-917-514
+2026-04-06 17:45:57 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/thumbPrintAnalysis/backend/database/database.py', reloading
+2026-04-06 17:45:58 - INFO -  * Restarting with stat
+2026-04-06 17:46:01 - WARNING -  * Debugger is active!
+2026-04-06 17:46:01 - INFO -  * Debugger PIN: 133-917-514
+2026-04-06 17:47:14 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://172.20.10.2:3001
+2026-04-06 17:47:14 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-06 17:47:14 - INFO -  * Restarting with stat
+2026-04-06 17:47:16 - WARNING -  * Debugger is active!
+2026-04-06 17:47:16 - INFO -  * Debugger PIN: 133-917-514
+2026-04-06 17:50:17 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/thumbPrintAnalysis/backend/database/database.py', reloading
+2026-04-06 17:50:18 - INFO -  * Restarting with stat
+2026-04-06 17:50:29 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://172.20.10.2:3001
+2026-04-06 17:50:29 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-06 17:50:29 - INFO -  * Restarting with stat
+2026-04-06 17:50:32 - WARNING -  * Debugger is active!
+2026-04-06 17:50:32 - INFO -  * Debugger PIN: 133-917-514
+2026-04-06 17:50:59 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-04-06 17:50:59 - INFO - 127.0.0.1 - - [06/Apr/2026 17:50:59] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-04-06 17:50:59 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-04-06 17:51:00 - INFO - 127.0.0.1 - - [06/Apr/2026 17:51:00] "POST /dashboard HTTP/1.1" 200 -
+2026-04-06 17:51:43 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-04-06 17:51:43 - INFO - 127.0.0.1 - - [06/Apr/2026 17:51:43] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-04-06 17:51:43 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-04-06 17:51:43 - INFO - 127.0.0.1 - - [06/Apr/2026 17:51:43] "POST /dashboard HTTP/1.1" 200 -

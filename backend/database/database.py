@@ -3,11 +3,10 @@
 # Importing the necessary modules 
 import os
 import json 
-from database.ml import MachineLearningDB
 from pymongo import MongoClient
 
 # Creating a class for handling the database connection 
-class MongoDB(MachineLearningDB): 
+class MongoDB: 
     # Initializing the class 
     def __init__(self): 
         # Creating a variable for the client, and db
@@ -21,7 +20,7 @@ class MongoDB(MachineLearningDB):
             self.db = self.client[dbName]
             
             # Displaying the status message 
-            print(f"[INFO]: Connected to the MongoDB database.")
+            # print(f"[INFO]: Connected to the MongoDB database.")
         
         # Catch the error and log it to the console 
         except Exception as error: 
@@ -70,6 +69,17 @@ class MongoDB(MachineLearningDB):
         
         # Returning the result 
         return result.acknowledged
+    
+    # Creating a method for saving the thumb print data 
+    def saveThumbprintAnalysis(self, collectionName, data): 
+        # Getting the collection object 
+        collection = self.db[collectionName]
+        
+        # Saving the collection data 
+        result = collection.insert_one(data)
+        
+        # Returning the result 
+        return result.acknowledged 
 
 
 # Creating a shared instance of the MongoDB class 
