@@ -220,4 +220,5 @@ const Dashboard = () => {
   );
 };
 
+// Exporting the dashboard 
 export default Dashboard;

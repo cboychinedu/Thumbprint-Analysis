@@ -129,3 +129,40 @@ def analyseThumbPrint():
         
         # Sending back the error response 
         return jsonify(errorResponse)
+    
+# Creating a route for getting the users history 
+@dashboard.route("/history", methods=["GET"])
+def getThumbprintHistory(): 
+    # Using try catch block to get the user's request 
+    try: 
+        # Authenticate the user via token 
+        userToken = request.headers.get("x-auth-token")
+        
+        # if the user token is not present 
+        if not userToken: 
+            # Return the following json object below 
+            return jsonify({
+                "message": "Unauthorized", 
+                "status": "error", 
+                "statusCode": 401 
+            })
+            
+        # Decode the token 
+        decodedToken = jwt.decode(userToken, secretKey, algorithms=["HS256"])
+        email = decodedToken["email"]
+        
+        # Getting the users history 
+        usersHistory = db.getUsersAnalyzedHistory("thumbprintAnalysis", email)
+        
+        # Fetch the history from the database 
+        return jsonify({
+            "status": "success", 
+            "history": usersHistory, 
+            "statusCode": 200
+        })
+    
+    # Except exception as error 
+    except Exception as error: 
+        # Display the history error 
+        print(f"History Error: ", {error})
+        return jsonify({ "message": str(error), "status": "error", "statusCode": 500 }) 

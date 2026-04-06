@@ -1,6 +1,12 @@
-# Thumb Print Analysis
+# Thumb Print Analysis (ThumbPrint AI)
 
-![Thumb Print Analysis](./images/displayImage.jpg)
+![Dashboard](./images/img1.png)
+
+![DashboardUploadImage](./images/img2.png)
+
+![DashboardAnalysis](./images/img3.png)
+
+![DashboardHistory](./images/img4.png)
 
 **Thumb Print Analysis** is a comprehensive full-stack application designed to identify individuals based on their thumbprint images. By leveraging a machine learning model integrated into a Flask backend and a modern Next.js frontend, the system provides a seamless experience for user registration, authentication, and biometric identification.
 

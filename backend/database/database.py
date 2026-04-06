@@ -80,6 +80,40 @@ class MongoDB:
         
         # Returning the result 
         return result.acknowledged 
+    
+    # Creating a method for extracting the history based on the email given 
+    def getUsersAnalyzedHistory(self, collectionName, email):
+        # Creating the mongodb query 
+        query = { 'email': email } 
+        
+        # Getting the collection name 
+        collection = self.db[collectionName]
+        
+        # Find all the analyzed data for this specific user 
+        cursor = collection.find(query, {
+            "_id": 1, 
+            "email": 1, 
+            "owner": 1, 
+            "status": 1, 
+            "confidence": 1, 
+            "latency": 1, 
+            "encodedImage": 1, 
+            "type": 1 
+        })
+        
+        # Convert the history list into a list 
+        historyList = list(cursor) 
+        
+        # if the returned data type is None type, execute the block of code below 
+        if not historyList: 
+            # Return None 
+            return None; 
+        
+        # Convert the MongoDB documents into a json object 
+        jsonData = json.dumps(historyList, default=str)
+        
+        # Return the json object 
+        return jsonData; 
 
 
 # Creating a shared instance of the MongoDB class 
