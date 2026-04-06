@@ -1,13 +1,131 @@
 #!/usr/bin/env python3 
 
 # Importing the necessary modules 
+import os 
+import jwt 
+import base64
+from datetime import datetime
 from database.database import db
+from werkzeug.utils import secure_filename
 from flask import jsonify, request, Blueprint
+from machineLearning.machineLearning import MachineLearning
+
+# Creating a directory to store the thumbprint images 
+thumbPrintDir = "thumbPrintImages"
+
+# Getting the secret key 
+secretKey = os.getenv("SECRET_KEY")
+
+# Creating the instance of the machine learning class 
+mlClass = MachineLearning()
 
 # Creating the dashboard blueprint route 
 dashboard = Blueprint("dashboard", __name__)
 
 # Creating the route for the dashboard page 
 @dashboard.route("/", methods=["POST"])
-def dashboardPage(): 
-    return jsonify({ "message": "Dashboard Page!"})
+def analyseThumbPrint():
+    # Using try except block 
+    try:
+        # Getting the headers for the user cookie 
+        userToken = request.headers.get("x-auth-token")
+        decodedToken = jwt.decode(userToken, secretKey, algorithms=["HS256"], options={"verify_signature": True})
+        
+        # Get the user email address 
+        email = decodedToken["email"]
+        
+        # If no file is part of the request, return an error message 
+        if 'thumbprint' not in request.files: 
+            # Return the error message 
+            return jsonify({
+                "message": "No file found", 
+                "status": "error", 
+                "statusCode": 400
+            }) 
+            
+        # if the file is found, get the file object 
+        thumbprint = request.files['thumbprint']
+        
+        # if the filename is empty, return an error message 
+        if thumbprint.filename == "": 
+            return jsonify({
+                "message": "No file selected", 
+                "status": "error", 
+                "statusCode": 400
+            })
+            
+        # if the file name was provided 
+        if thumbprint:
+            # Sanitize the file name 
+            filename = secure_filename(thumbprint.filename)
+            
+            # Append timestamp to make the filename unique 
+            uniqueFilename = f"{datetime.now().strftime('%Y%m%d%H%M%S')}_{filename}"
+            
+            # Create a full file path in the temp directory 
+            filePath = os.path.join(thumbPrintDir, uniqueFilename)
+            
+            # Save the file 
+            thumbprint.save(filePath)
+            
+            # Loading the ml model and perform inference 
+            result, confidence, latency = mlClass.performInference(filePath)
+            
+            # Encode the process image as a base64 string 
+            with open(filePath, "rb") as imageFile: 
+                # Encode the image 
+                encodedImage = base64.b64encode(imageFile.read()).decode('utf-8')
+                
+            # Creating the database data
+            databaseData = {
+                "email": email, 
+                "owner": str(result),
+                "status": "success", 
+                "confidence": str(confidence), 
+                "latency": str(latency), 
+                "encodedImage": f"data:image/jpeg;base64,{encodedImage}", 
+                "type": "image"
+            }
+            
+            # Saving the analysis into a database 
+            db.saveThumbprintAnalysis('thumbprintAnalysis', databaseData)
+            
+            # Building the response message 
+            responseMessage = {
+                "message": "Thumbprint detected!",
+                "status": "success", 
+                "owner": str(result), 
+                "confidence": str(confidence), 
+                "latency": str(latency)
+            }
+            
+            # Returning the message 
+            return jsonify(responseMessage)
+        
+        # Else if the file name was not provided 
+        else: 
+            # Build the error response 
+            responseMessage = {
+                "message": "File not found", 
+                "status": "error", 
+                "owner": "Error finding thumb owner"
+            }
+            
+            # Sending the error message 
+            return jsonify(responseMessage)
+        
+    # Except exception as error 
+    except Exception as error: 
+        # Display the error message 
+        print(f"Error: {error}")
+        
+        # Build the error response 
+        errorResponse = {
+            "message": str(error), 
+            "status": "error", 
+            "owner": "Error finding thumb owner", 
+            "statusCode": 505
+        }
+        
+        # Sending back the error response 
+        return jsonify(errorResponse)

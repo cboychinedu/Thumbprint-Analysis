@@ -1,15 +1,21 @@
+// Using the client 
 "use client";
+
+// Importing the necessary modules 
+import Cookies from 'js-cookie';
 import React, { useState, Fragment } from 'react';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
 
+// Creating the dashboard component 
 const Dashboard = () => {
+  // Setting the necessary states 
   const [selectedImage, setSelectedImage] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [isUploading, setIsUploading] = useState(false);
   const [inferenceResult, setInferenceResult] = useState(null);
 
-  // Handle file selection
+  // Handling the file selection
   const handleFileChange = (file) => {
     if (file && file.type.startsWith('image/')) {
       setSelectedImage(file);
@@ -18,11 +24,13 @@ const Dashboard = () => {
     }
   };
 
+  // Creating a function for handling the drag over function 
   const handleDragOver = (e) => {
     e.preventDefault();
     e.stopPropagation();
   };
 
+  // Creating a function for handling the drag and drop function 
   const handleDrop = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -30,27 +38,49 @@ const Dashboard = () => {
     handleFileChange(file);
   };
 
+  // Creating a function for handling the upload 
   const handleUpload = async () => {
     if (!selectedImage) return;
     setIsUploading(true);
     
+    // Get the form data 
     const formData = new FormData();
+
+    // Append the image thumbprint to the form data 
     formData.append('thumbprint', selectedImage);
 
+    // Getting the cookie data 
+    const userCookie = Cookies.get("x-auth-token"); 
+
+    // Using try catch block to handle the request to the backend sever 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/dashboard/analyze`, {
+      // Set the server url 
+      const serverUrl = `${process.env.NEXT_PUBLIC_SERVER_URL}/dashboard`; 
+
+      // Making a request to the backend server 
+      const response = await fetch(serverUrl, {
+        headers: { 'x-auth-token': userCookie }, 
         method: 'POST',
         body: formData,
       });
+
+      // Getting the response from the server 
       const data = await response.json();
       setInferenceResult(data);
-    } catch (error) {
+    } 
+    
+    // On error generated, catch the error 
+    catch (error) {
+      // Setting the inference result
       setInferenceResult({ status: 'error', message: 'Connection to ML Server failed.' });
-    } finally {
+    } 
+    // Finally, set the isUploading to be false
+    finally {
       setIsUploading(false);
     }
   };
 
+  // Rendering the component JSX 
   return (
     <Fragment>
       {/* Main Background: Pure White */}
@@ -154,11 +184,11 @@ const Dashboard = () => {
                         <div className="grid grid-cols-2 gap-8 pt-8 border-t border-slate-100">
                           <div>
                             <p className="text-[10px] text-slate-400 uppercase font-mono">Confidence Level</p>
-                            <p className="text-xl font-bold text-teal-600">{(inferenceResult.confidence * 100).toFixed(2)}%</p>
+                            <p className="text-xl font-bold text-teal-600">{inferenceResult.confidence}%</p>
                           </div>
                           <div>
                             <p className="text-[10px] text-slate-400 uppercase font-mono">ML Latency</p>
-                            <p className="text-xl font-bold text-slate-800">{inferenceResult.latency || '89ms'}</p>
+                            <p className="text-xl font-bold text-slate-800">{inferenceResult.latency} secs </p>
                           </div>
                         </div>
                       </div>
