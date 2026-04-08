@@ -52,6 +52,7 @@ const Settings = () => {
     }
   };
 
+  // Rendering the jsx component 
   return (
     <Fragment>
       {/* Adding the navbar */}
@@ -182,4 +183,5 @@ const Settings = () => {
   );
 };
 
+// Exporting the setting component 
 export default Settings;

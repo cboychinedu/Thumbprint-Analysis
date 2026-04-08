@@ -71,7 +71,7 @@ const Navbar = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16 items-center">
                         {/* Logo */}
-                        <Link className="flex items-center gap-2 z-[60]" href="/">
+                        <Link className="flex items-center gap-2 z-[60]" href={isLoggedIn ? "/dashboard": "/" }>
                             <Fingerprint className="text-indigo-600 w-8 h-8" />
                             <span className="font-bold text-xl tracking-tight">ThumbPrint AI</span>
                         </Link>
@@ -82,6 +82,8 @@ const Navbar = () => {
                                 <a href="/#how-it-works" className="hover:text-indigo-600 transition">How it Works</a>
                                 <a href="/#architecture" className="hover:text-indigo-600 transition">Architecture</a>
                                 <a href="/#setup" className="hover:text-indigo-600 transition">Setup</a>
+                                <a href="/about" className="hover:text-indigo-600 transition"> About </a>
+                                <a href="/contact" className="hover:text-indigo-600 transition-all"> Contact </a>
                             </div>
                         )}
 
@@ -140,6 +142,8 @@ const Navbar = () => {
                                 <a href="/#how-it-works" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">How it Works</a>
                                 <a href="/#architecture" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">Architecture</a>
                                 <a href="/#setup" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">Setup</a>
+                                <a href="/about" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50"> About </a>
+                                <a href="/contact" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50"> Contact </a>
                                 <div className="grid grid-cols-2 gap-3 pt-4">
                                     <Link href="/login" onClick={() => setIsMenuOpen(false)} className="text-center border border-indigo-600 py-3 rounded-md font-bold text-indigo-600">Login</Link>
                                     <Link href="/register" onClick={() => setIsMenuOpen(false)} className="text-center bg-indigo-600 text-white py-3 rounded-md font-bold">Register</Link>
