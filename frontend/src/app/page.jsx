@@ -19,37 +19,40 @@
 // Importing the necessary modules 
 import React, { Fragment } from 'react';
 import {
-  Cpu, 
-  ShieldCheck, 
-  UploadCloud, 
-  Search, 
-  Zap, 
+  Cpu,
+  ShieldCheck,
+  UploadCloud,
+  Search,
+  Zap,
   Terminal,
   CheckCircle2
 } from 'lucide-react';
 import Footer from '@/components/footer/footer';
-import Navbar from '@/components/navbar/navbar'; 
-import { Fade, Zoom, Slide, Reveal, AttentionSeeker, Hinge  } from 'react-awesome-reveal';
+import Navbar from '@/components/navbar/navbar';
+import { Fade, Zoom, Slide, Reveal, AttentionSeeker, Hinge } from 'react-awesome-reveal';
 
 // Creating the home component 
 const Home = () => {
   return (
-    <Fragment> 
+    <Fragment>
       <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-indigo-100">
         {/* Adding the navbar */}
-        <Navbar /> 
+        <Navbar />
 
         {/* Hero Section */}
         <header className="relative py-20 overflow-hidden">
-          <Fade cascade duration={5000}> 
+          <Fade cascade duration={5000}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center">
-                <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
-                  Biometric <span> Identification </span> <br />
-                  <span className="text-indigo-600">Powered by Machine Learning</span>
-                </h1>
+                <AttentionSeeker effect='bounce' cascade duration={7000}> 
+                  <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
+                    Biometric 
+                    <span className="hover:italic transition-all duration-[3000ms] hover:text-blue-950"> Identification </span> <br />
+                    <span className="text-indigo-600">Powered by Machine Learning</span>
+                  </h1>
+                </AttentionSeeker>
                 <p className="max-w-2xl mx-auto text-lg text-slate-600 mb-10">
-                  A comprehensive full-stack application designed to identify individuals through 
+                  A comprehensive full-stack application designed to identify individuals through
                   advanced ridge pattern analysis and minutiae extraction.
                 </p>
               </div>
@@ -74,9 +77,9 @@ const Home = () => {
                 { icon: <Zap />, title: "5. Real-time Rendering", desc: "Identification results are returned via JSON and rendered instantly." },
                 { icon: <CheckCircle2 />, title: "6. Result Retrieval", desc: "Get owner info and confidence scores with high precision." },
               ].map((step, index) => (
-                <Slide direction={step.title=="4. Backend Processing" ? "right": "left"} cascade key={index}>
+                <Slide direction={step.title == "4. Backend Processing" ? "right" : "left"} cascade key={index}>
                   <div key={index} className="p-6 rounded-2xl border border-slate-100 hover:border-indigo-100 hover:shadow-xl hover:shadow-indigo-50 transition duration-300">
-                    
+
                     <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center mb-4">
                       {step.icon}
                     </div>
@@ -116,7 +119,7 @@ const Home = () => {
                   </Zoom>
                 </div>
               </div>
-              <Fade direction='right' duration={1800}> 
+              <Fade direction='right' duration={1800}>
                 <div className="bg-slate-900 rounded-2xl p-8 text-indigo-400 font-mono text-sm shadow-2xl">
                   <div className="flex gap-2 mb-4">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -139,37 +142,37 @@ const Home = () => {
 
         {/* Setup Section */}
         <section id="setup" className="py-20 bg-white">
-          <AttentionSeeker effect='shake' cascade  duration={5000}> 
-          <Fade cascade duration={2800}> 
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-              <AttentionSeeker effect='shake' cascade  duration={5000}> 
-                <h2 className="text-3xl font-bold mb-10 text-center">Get Started Locally</h2>
-              </AttentionSeeker>
-              <div className="space-y-6">
-                <div className="bg-slate-900 rounded-xl overflow-hidden shadow-lg">
-                  <div className="bg-slate-800 px-4 py-2 text-slate-400 text-xs flex justify-between">
-                    <span>Terminal - Installation</span>
-                    <Terminal size={14} />
-                  </div>
-                  <div className="p-6 text-indigo-300 font-mono text-sm">
-                    <p className="mb-2"><span className="text-teal-400"># Clone Repo</span></p>
-                    <p className="mb-4">git clone https://github.com/your-repo/thumbPrintAnalysis.git</p>
-                    <p className="mb-2"><span className="text-teal-400"># Backend Setup</span></p>
-                    <p>cd backend && pip install -r requirements.txt</p>
-                    <p className="mb-4">python app.py</p>
-                    <p className="mb-2"><span className="text-teal-400"># Frontend Setup</span></p>
-                    <p>cd frontend && npm install</p>
-                    <p>npm run dev</p>
+          <AttentionSeeker effect='shake' cascade duration={5000}>
+            <Fade cascade duration={2800}>
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <AttentionSeeker effect='shake' cascade duration={5000}>
+                  <h2 className="text-3xl font-bold mb-10 text-center">Get Started Locally</h2>
+                </AttentionSeeker>
+                <div className="space-y-6">
+                  <div className="bg-slate-900 rounded-xl overflow-hidden shadow-lg">
+                    <div className="bg-slate-800 px-4 py-2 text-slate-400 text-xs flex justify-between">
+                      <span>Terminal - Installation</span>
+                      <Terminal size={14} />
+                    </div>
+                    <div className="p-6 text-indigo-300 font-mono text-sm">
+                      <p className="mb-2"><span className="text-teal-400"># Clone Repo</span></p>
+                      <p className="mb-4">git clone https://github.com/cboychinedu/Thumbprint-Analysis</p>
+                      <p className="mb-2"><span className="text-teal-400"># Backend Setup</span></p>
+                      <p>cd backend && pip install -r requirements.txt</p>
+                      <p className="mb-4">python app.py</p>
+                      <p className="mb-2"><span className="text-teal-400"># Frontend Setup</span></p>
+                      <p>cd frontend && npm install</p>
+                      <p>npm run dev</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Fade>
+            </Fade>
           </AttentionSeeker>
         </section>
 
         {/* Adding the footer */}
-        <Footer /> 
+        <Footer />
       </div>
     </Fragment>
   );
