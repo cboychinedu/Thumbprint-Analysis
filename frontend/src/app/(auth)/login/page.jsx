@@ -15,6 +15,7 @@ import { useRouter } from 'next/navigation';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
 import AlertBox from '@/components/alertbox/alertbox';
+import { AttentionSeeker } from 'react-awesome-reveal';
 
 // Creating the Login component 
 const Login = () => {
@@ -175,7 +176,7 @@ const Login = () => {
             )}
 
             {/* Adding the main div */}
-            <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 selection:bg-indigo-100">
+            <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 selection:bg-indigo-100 mb-25 mt-10">
                 {/* Background Decorative Elements */}
                 <div className="absolute inset-0 overflow-hidden -z-10">
                     <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-indigo-100 rounded-full blur-3xl opacity-50" />
@@ -185,7 +186,7 @@ const Login = () => {
                 <div className="max-w-5xl w-full grid md:grid-cols-2 bg-white rounded-3xl shadow-2xl shadow-slate-200 overflow-hidden border border-slate-100">
 
                     {/* Left Side: Branding/Visual */}
-                    <div className="hidden md:flex flex-col justify-between p-12 bg-slate-900 text-white relative overflow-hidden">
+                    <div className="hidden md:flex flex-col justify-between p-12 bg-indigo-600 text-white relative overflow-hidden">
                         <div className="relative z-10">
                             <div className="flex items-center gap-2 mb-12">
                                 <Fingerprint className="text-indigo-400 w-10 h-10" />

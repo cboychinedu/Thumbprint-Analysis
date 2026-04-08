@@ -17,6 +17,7 @@ import { useRouter } from 'next/navigation'
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
 import AlertBox from '@/components/alertbox/alertbox';
+import { AttentionSeeker } from 'react-awesome-reveal';
 
 // Creating the register component 
 export default function Register() {
@@ -195,7 +196,7 @@ export default function Register() {
             )}
 
             {/* Creating the main component */}
-            <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 selection:bg-indigo-100">
+            <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 selection:bg-indigo-100 mb-25 mt-10">
                 {/* Background Decorative Elements */}
                 <div className="absolute inset-0 overflow-hidden -z-10">
                     <div className="absolute -top-[5%] -right-[5%] w-[35%] h-[35%] bg-indigo-100 rounded-full blur-3xl opacity-50" />
@@ -253,10 +254,12 @@ export default function Register() {
 
                     {/* Right Side: Registration Form */}
                     <div className="p-8 md:p-12 flex flex-col justify-center">
-                        <div className="mb-8 text-center md:text-left">
-                            <h1 className="text-3xl font-bold text-slate-900 mb-2">Create Account</h1>
-                            <p className="text-slate-500 text-sm">Sign up to start analyzing biometric thumbprints.</p>
-                        </div>
+                        <AttentionSeeker effect='bounce' cascade duration={8000}>
+                            <div className="mb-8 text-center md:text-left">
+                                <h1 className="text-3xl font-bold text-slate-900 mb-2">Create Account</h1>
+                                <p className="text-slate-500 text-sm">Sign up to start analyzing biometric thumbprints.</p>
+                            </div>
+                        </AttentionSeeker>
 
                         <form className="space-y-4">
                             {/* Full Name */}
