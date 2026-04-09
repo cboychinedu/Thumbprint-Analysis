@@ -48,7 +48,7 @@ const NotFound = () => {
 
                     {/* Text Content */}
                     <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                        Identity Not Found
+                        Identity Not Found.
                     </h1>
                     <p className="text-slate-500 text-lg mb-10 leading-relaxed">
                         The minutiae of this page pattern doesn't match our database.
