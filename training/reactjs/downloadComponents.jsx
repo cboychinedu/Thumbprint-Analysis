@@ -3,93 +3,16 @@
 
 // Importing the necessary modules 
 import Cookies from 'js-cookie';
-import Swal from 'sweetalert2';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
+import { Clock, User, Zap, Target, Download } from 'lucide-react'; // Added Download icon
 import React, { useEffect, useState, Fragment } from 'react';
-import { Clock, User, Zap, Target, Download } from 'lucide-react';
 
 // Creating the history component 
 const History = () => {
-    // Getting the user cookies 
-    const userToken = Cookies.get("x-auth-token") || null;
-
     // Setting the state for loading the history data 
     const [history, setHistory] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
-    // Creating a function for deleting the history 
-    const deleteItem = (event) => {
-        // Getting the ID from the data-key attribute 
-        const itemId = event.currentTarget.dataset.key;
-
-        // Triggering the SweetAlert confirmation modal 
-        Swal.fire({
-            title: "Are you sure?", 
-            text: "You won't be able to revert this analysis data!", 
-            icon: "warning", 
-            showCancelButton: true, 
-            confirmButtonColor: "#4f46e5", 
-            cancelButtonColor: "#4f46e5", 
-            confirmButtonText: "Yes, delete it!", 
-            background: "#ffffff", 
-            color: "#0f172a"
-        }).then(async (result) => {
-            // If the user clicked the confirm button 
-            if (result.isConfirmed) {
-                // Using try catch block to send the id to the server 
-                try {
-                    // Setting the server url for deletion 
-                    const serverUrl = `${process.env.NEXT_PUBLIC_SERVER_URL}/dashboard/delete`; 
-
-                    // Making the DELETE request to the backend 
-                    const response = await fetch(serverUrl, {
-                        method: 'DELETE', 
-                        headers: { 
-                            'Content-Type': 'application/json', 
-                            'x-auth-token': userToken 
-                        }, 
-                        body: JSON.stringify({ _id: itemId })
-                    }); 
-
-                    // Getting the response from the server as a JSON object 
-                    const data = await response.json(); 
-
-                    // if the backend confirmed the deletion 
-                    if (data.status === "success") {
-                        // Updating the local state to remove the item from the UI 
-                        setHistory(prev => prev.filter(item => item._id !== itemId)); 
-
-                        // Showing the success message 
-                        Swal.fire(
-                            "Deleted!", 
-                            "The analysis record has been removed!", 
-                            "success"
-                        ); 
-                    }
-
-                    // Else if there was an error 
-                    else {
-                        // Log the error message 
-                        console.log("Error: ", data.message); 
-
-                        // Display the swal error 
-                        Swal.fire("Error!", "Error deleting the record!", "error"); 
-                    }
-                }
-
-                // Catching the error 
-                catch (error) {
-                    // Displaying the error message 
-                    console.log("Error: ", error); 
-
-                    // Displaying the swal error 
-                    Swal.fire("Error!", "Could not delete the record. Please try again.", "error"); 
-                }
-            }
-        })
-
-    }; 
 
     // Creating a function for loading the history data 
     const fetchHistory = async () => {
@@ -98,6 +21,9 @@ const History = () => {
 
         // Using try catch block to connect to the backend server 
         try {
+            // Getting the user cookies 
+            const userToken = Cookies.get("x-auth-token");
+
             // Making a request to the backend server 
             const response = await fetch(serverUrl, {
                 method: 'GET',
@@ -111,8 +37,7 @@ const History = () => {
             if (data.status === 'success') {
                 // Getting the history data 
                 let historyData = JSON.parse(data.history);
-                // console.log(historyData);
-
+                
                 // Checking if the returned history was null values 
                 if (historyData === null) {
                     // Setting the history values as an empty list 
@@ -137,6 +62,31 @@ const History = () => {
             // set the loading to false 
             setIsLoading(false);
         }
+    };
+
+    // Creating a function to download all history as a JSON file
+    const downloadAllHistory = () => {
+        // Checking if there is data to export
+        if (history.length === 0) return;
+
+        // Creating a blob from the history data
+        const blob = new Blob([JSON.stringify(history, null, 2)], { type: 'application/json' });
+        
+        // Creating a temporary URL for the blob
+        const url = URL.createObjectURL(blob);
+        
+        // Creating a temporary link element
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `thumbprint_history_export_${new Date().toISOString().split('T')[0]}.json`;
+        
+        // Appending to body, clicking, and removing
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        // Cleaning up the URL
+        URL.revokeObjectURL(url);
     };
 
     // Using use effect to render the data on componente mount. 
@@ -165,7 +115,7 @@ const History = () => {
                         {/* EXPORT ALL BUTTON */}
                         {!isLoading && history.length > 0 && (
                             <button
-                                // onClick={downloadAllHistory}
+                                onClick={downloadAllHistory}
                                 className="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl text-sm font-bold uppercase tracking-widest transition-all shadow-lg shadow-indigo-100"
                             >
                                 <Download size={18} />
@@ -214,32 +164,24 @@ const History = () => {
                                             </div>
 
                                             <div className="flex justify-between items-center text-[10px] pt-3 border-t border-slate-50">
-                                                <span className="flex items-center gap-1 text-black uppercase font-mono">
-                                                    <Clock size={10} /> {item.timestamp}
+                                                <span className="flex items-center gap-1 text-slate-300 uppercase font-mono">
+                                                    <Clock size={10} /> {item.timestamp || 'N/A'}
                                                 </span>
                                                 <span className="bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter">
                                                     Success
                                                 </span>
                                             </div>
-                                            <div className="flex justify-between">
-                                                <div>
-                                                    <button
-                                                        key={item._id}
-                                                        data-key={item._id}
-                                                        onClick={deleteItem}
-                                                        className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded w-fit"
-                                                    >
-                                                        Delete Result
-                                                    </button>
-                                                </div>
-                                                <div>
-                                                    <button
-                                                        key={item._id}
-                                                        className="bg-blue-800 hover:bg-blue-950 text-white py-2 px-4 rounded font-semibold w-fit"
-                                                    >
-                                                        Download Analysis
-                                                    </button>
-                                                </div>
+                                            <div className="flex justify-between gap-2 pt-2">
+                                                <button
+                                                    className="flex-1 bg-red-50 text-red-600 hover:bg-red-600 hover:text-white font-bold py-2 px-3 rounded-lg text-[10px] uppercase transition-colors border border-red-100"
+                                                >
+                                                    Delete
+                                                </button>
+                                                <button
+                                                    className="flex-1 bg-slate-900 text-white hover:bg-slate-800 py-2 px-3 rounded-lg font-bold text-[10px] uppercase transition-colors"
+                                                > 
+                                                    Download
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

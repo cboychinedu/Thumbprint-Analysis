@@ -4,9 +4,11 @@
 import os
 import json 
 from pymongo import MongoClient
+from bson.objectid import ObjectId
+from database.downloadUsersData import HandleDownloadAnalyzedHistory
 
 # Creating a class for handling the database connection 
-class MongoDB: 
+class MongoDB(HandleDownloadAnalyzedHistory): 
     # Initializing the class 
     def __init__(self): 
         # Creating a variable for the client, and db
@@ -115,6 +117,52 @@ class MongoDB:
         
         # Return the json object 
         return jsonData; 
+    
+    # Creating a method for deleting the user's analyzed history data 
+    def deleteUsersAnalyzedHistory(self, _id, email, collectionName="thumbprintAnalysis"):
+        # Checking if the user is first registered on our database with the token email value 
+        usersData = self.getUsersInformation(collectionName="users", email=email)
+        
+        # if the user's data does not exists
+        if not usersData: 
+            # Return None 
+            return None; 
+        
+        # else if the user's data was found on the database, execute 
+        # the following block of code below 
+        else: 
+            # Create the mongodb query 
+            query = { "email": email, "_id": ObjectId(_id) }
+            
+            # Getting the collection name 
+            collection = self.db[collectionName]
+            
+            # Deleting the history data 
+            result = collection.delete_one(query)
+            
+            
+            # If the deleted count is greater than zero(0), 
+            # Execute the block of code below 
+            if result.deleted_count > 0: 
+                # Displaying the status 
+                print("[INFO]: Record successfully deleted!")
+                
+                # Returning the status report 
+                return { 
+                    "status": "success", 
+                    "message": "History deleted!", 
+                    "statusCode": 200 
+                }
+            
+            # Else if the deleted count is equal to zero, or less than
+            # Execute the block of code below 
+            else: 
+                # Display the error report 
+                print("[INFO]: Delete failed: No matching record found!")
+                
+                # Return the error message 
+                return None 
+            
 
 
 # Creating a shared instance of the MongoDB class 

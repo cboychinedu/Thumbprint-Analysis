@@ -234,3 +234,62 @@ def getThumbprintHistory():
         
         # Return the error message
         return jsonify({ "message": str(error), "status": "error", "statusCode": 500 }) 
+    
+# Creating a route for deleting the analysis 
+@dashboard.route("/delete", methods=["DELETE"])
+def deleteAnalysis(): 
+    # Using try catch block to get the user's request 
+    try: 
+        # Authenticate the user via token 
+        userToken = request.headers.get("x-auth-token")
+        
+        # if the user token is not present 
+        if not userToken: 
+            # Return the following json object below 
+            return jsonify({
+                "message": "Unauthorized", 
+                "status": "error", 
+                "statusCode": 401
+            })
+            
+        # Decode the token 
+        decodedToken = jwt.decode(userToken, secretKey, algorithms=["HS256"])
+        email = decodedToken["email"]
+        
+        # Getting the user key/_id value 
+        userData = request.get_json()
+        _id = userData["_id"]
+        
+        # Deleting the user's analyzed history 
+        result = db.deleteUsersAnalyzedHistory(_id, email, collectionName="thumbprintAnalysis")
+        
+        # if the result is None, execute the block of code below 
+        if not result: 
+            # If the result returned a None type data type, execute the block 
+            # of code below 
+            # Generate the error response 
+            errorResponse = { 
+                "status": "error", 
+                "message": "Record not found or access denied!", 
+                "statusCode": 404
+            }
+            
+            # Sending the error response 
+            return jsonify(errorResponse)
+        
+        # if the result returned a success report
+        else: 
+            # Send the success report back to the client
+            return jsonify(result)
+    
+    # Building the error message 
+    except Exception as error:
+        # Building the error response 
+        errorResponse = {
+            "status": "error", 
+            "message": str(error), 
+            "statusCode": 500
+        }
+        
+        # Sending the error message 
+        return jsonify(errorResponse)

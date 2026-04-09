@@ -66,3 +66,145 @@
 2026-04-09 00:30:03 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
 2026-04-09 00:30:23 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
 2026-04-09 00:30:23 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-09 05:59:23 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-09 05:59:23 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-09 06:00:52 - INFO - Request: DELETE /delete - IP: 127.0.0.1
+2026-04-09 06:00:52 - WARNING - 404 Error: User tried to access /delete
+2026-04-09 06:01:12 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 06:02:20 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 06:02:45 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 06:03:19 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 06:04:17 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 06:07:16 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 06:07:36 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 06:08:47 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 06:12:23 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 06:13:10 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 06:28:50 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://10.1.7.128:3001
+2026-04-09 06:28:50 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-09 06:28:50 - INFO -  * Restarting with stat
+2026-04-09 06:28:52 - WARNING -  * Debugger is active!
+2026-04-09 06:28:52 - INFO -  * Debugger PIN: 133-917-514
+2026-04-09 06:29:01 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 06:29:01 - INFO - 127.0.0.1 - - [09/Apr/2026 06:29:01] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-04-09 06:29:23 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 06:29:23 - INFO - 127.0.0.1 - - [09/Apr/2026 06:29:23] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-04-09 06:32:56 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:32:56 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:32:56 - INFO - 127.0.0.1 - - [09/Apr/2026 06:32:56] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:32:56 - INFO - 127.0.0.1 - - [09/Apr/2026 06:32:56] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:32:56 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:32:56 - INFO - 127.0.0.1 - - [09/Apr/2026 06:32:56] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:32:56 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:32:56 - INFO - 127.0.0.1 - - [09/Apr/2026 06:32:56] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:36:40 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:36:41 - INFO - 127.0.0.1 - - [09/Apr/2026 06:36:41] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:36:41 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:36:41 - INFO - 127.0.0.1 - - [09/Apr/2026 06:36:41] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:37:23 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:37:23 - INFO - 127.0.0.1 - - [09/Apr/2026 06:37:23] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:37:23 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:37:23 - INFO - 127.0.0.1 - - [09/Apr/2026 06:37:23] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:42:37 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:42:37 - INFO - 127.0.0.1 - - [09/Apr/2026 06:42:37] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:42:37 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:42:37 - INFO - 127.0.0.1 - - [09/Apr/2026 06:42:37] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:44:44 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:44:44 - INFO - 127.0.0.1 - - [09/Apr/2026 06:44:44] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:44:44 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:44:44 - INFO - 127.0.0.1 - - [09/Apr/2026 06:44:44] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:50:55 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:50:55 - INFO - 127.0.0.1 - - [09/Apr/2026 06:50:55] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 06:50:55 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 06:50:55 - INFO - 127.0.0.1 - - [09/Apr/2026 06:50:55] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 07:25:50 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-04-09 07:25:50 - INFO - 127.0.0.1 - - [09/Apr/2026 07:25:50] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-04-09 07:25:50 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 07:25:50 - INFO - 127.0.0.1 - - [09/Apr/2026 07:25:50] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-04-09 07:26:01 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 07:26:01 - INFO - 127.0.0.1 - - [09/Apr/2026 07:26:01] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 07:26:01 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 07:26:01 - INFO - 127.0.0.1 - - [09/Apr/2026 07:26:01] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 07:26:11 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-04-09 07:26:11 - INFO - 127.0.0.1 - - [09/Apr/2026 07:26:11] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-04-09 07:26:11 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 07:26:11 - INFO - 127.0.0.1 - - [09/Apr/2026 07:26:11] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-04-09 07:26:45 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-04-09 07:26:45 - INFO - 127.0.0.1 - - [09/Apr/2026 07:26:45] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-04-09 07:26:45 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 07:26:45 - INFO - 127.0.0.1 - - [09/Apr/2026 07:26:45] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-04-09 07:26:51 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 07:26:51 - INFO - 127.0.0.1 - - [09/Apr/2026 07:26:51] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 07:26:51 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 07:26:51 - INFO - 127.0.0.1 - - [09/Apr/2026 07:26:51] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 07:27:02 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 07:27:02 - INFO - 127.0.0.1 - - [09/Apr/2026 07:27:02] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 07:27:02 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 07:27:02 - INFO - 127.0.0.1 - - [09/Apr/2026 07:27:02] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 07:36:34 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/thumbPrintAnalysis/backend/database/extractUsersData.py', reloading
+2026-04-09 07:36:35 - INFO -  * Restarting with stat
+2026-04-09 07:36:39 - WARNING -  * Debugger is active!
+2026-04-09 07:36:39 - INFO -  * Debugger PIN: 133-917-514
+2026-04-09 07:48:58 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/thumbPrintAnalysis/backend/database/extractUsersData.py', reloading
+2026-04-09 07:48:59 - INFO -  * Restarting with stat
+2026-04-09 07:49:03 - WARNING -  * Debugger is active!
+2026-04-09 07:49:03 - INFO -  * Debugger PIN: 133-917-514
+2026-04-09 07:49:24 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/thumbPrintAnalysis/backend/database/database.py', reloading
+2026-04-09 07:49:25 - INFO -  * Restarting with stat
+2026-04-09 07:49:27 - WARNING -  * Debugger is active!
+2026-04-09 07:49:27 - INFO -  * Debugger PIN: 133-917-514
+2026-04-09 07:49:41 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/thumbPrintAnalysis/backend/database/extractUsersData.py', reloading
+2026-04-09 07:49:41 - INFO -  * Restarting with stat
+2026-04-09 07:49:44 - WARNING -  * Debugger is active!
+2026-04-09 07:49:44 - INFO -  * Debugger PIN: 133-917-514
+2026-04-09 07:50:52 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/thumbPrintAnalysis/backend/database/database.py', reloading
+2026-04-09 07:50:53 - INFO -  * Restarting with stat
+2026-04-09 07:50:56 - WARNING -  * Debugger is active!
+2026-04-09 07:50:56 - INFO -  * Debugger PIN: 133-917-514
+2026-04-09 08:00:53 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:00:53 - INFO - 127.0.0.1 - - [09/Apr/2026 08:00:53] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:00:53 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:00:53 - INFO - 127.0.0.1 - - [09/Apr/2026 08:00:53] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:02:11 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-04-09 08:02:11 - INFO - 127.0.0.1 - - [09/Apr/2026 08:02:11] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-04-09 08:02:11 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 08:02:11 - INFO - 127.0.0.1 - - [09/Apr/2026 08:02:11] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-04-09 08:02:15 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:02:15 - INFO - 127.0.0.1 - - [09/Apr/2026 08:02:15] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:02:15 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:02:15 - INFO - 127.0.0.1 - - [09/Apr/2026 08:02:15] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:02:59 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-04-09 08:02:59 - INFO - 127.0.0.1 - - [09/Apr/2026 08:02:59] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-04-09 08:02:59 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-04-09 08:03:00 - INFO - 127.0.0.1 - - [09/Apr/2026 08:03:00] "POST /dashboard HTTP/1.1" 200 -
+2026-04-09 08:03:06 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:03:06 - INFO - 127.0.0.1 - - [09/Apr/2026 08:03:06] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:03:06 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:03:06 - INFO - 127.0.0.1 - - [09/Apr/2026 08:03:06] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:03:06 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:03:06 - INFO - 127.0.0.1 - - [09/Apr/2026 08:03:06] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:03:06 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:03:06 - INFO - 127.0.0.1 - - [09/Apr/2026 08:03:06] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:04:42 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:04:42 - INFO - 127.0.0.1 - - [09/Apr/2026 08:04:42] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:04:42 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:04:42 - INFO - 127.0.0.1 - - [09/Apr/2026 08:04:42] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:05:11 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:05:11 - INFO - 127.0.0.1 - - [09/Apr/2026 08:05:11] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:05:11 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:05:11 - INFO - 127.0.0.1 - - [09/Apr/2026 08:05:11] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:06:01 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:06:01 - INFO - 127.0.0.1 - - [09/Apr/2026 08:06:01] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:06:01 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:06:02 - INFO - 127.0.0.1 - - [09/Apr/2026 08:06:02] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:06:26 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-04-09 08:06:26 - INFO - 127.0.0.1 - - [09/Apr/2026 08:06:26] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-04-09 08:06:26 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-09 08:06:26 - INFO - 127.0.0.1 - - [09/Apr/2026 08:06:26] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-04-09 08:06:32 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:06:32 - INFO - 127.0.0.1 - - [09/Apr/2026 08:06:32] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-09 08:06:32 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-09 08:06:32 - INFO - 127.0.0.1 - - [09/Apr/2026 08:06:32] "GET /dashboard/history HTTP/1.1" 200 -

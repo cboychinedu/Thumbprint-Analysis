@@ -60,7 +60,7 @@ logging.getLogger('pymongo').setLevel(logging.WARNING)
 
 # Removing the console warning error about working in  
 # A production environment 
-logging.getLogger("werkzeug").setLevel(logging.ERROR)
+# logging.getLogger("werkzeug").setLevel(logging.ERROR)
 
 # Clear existing handlers to prevent duplicate messages
 if logger.hasHandlers():

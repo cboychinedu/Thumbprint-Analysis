@@ -28,7 +28,7 @@ const About = () => {
             setAnimateKey(prev => prev + 1);
         }, 7000);
 
-        // 
+        // Clearing the interval 
         return () => clearInterval(interval);
     }, []);
 
