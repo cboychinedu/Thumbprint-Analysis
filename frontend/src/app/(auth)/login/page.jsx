@@ -222,10 +222,12 @@ const Login = () => {
 
                     {/* Right Side: Login Form */}
                     <div className="p-8 md:p-16 flex flex-col justify-center">
-                        <div className="mb-10 text-center md:text-left">
-                            <h1 className="text-3xl font-bold text-slate-900 mb-2">Welcome Back</h1>
-                            <p className="text-slate-500">Please enter your details to sign in.</p>
-                        </div>
+                        <AttentionSeeker effect='bounce' cascade duration={8000}> 
+                            <div className="mb-10 text-center md:text-left">
+                                <h1 className="text-3xl font-bold text-slate-900 mb-2">Welcome Back</h1>
+                                <p className="text-slate-500">Please enter your details to sign in.</p>
+                            </div>
+                        </AttentionSeeker>
 
                         <form className="space-y-5">
                             {/* Email address */}

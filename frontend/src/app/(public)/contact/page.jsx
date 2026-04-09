@@ -2,7 +2,7 @@
 "use client";
 
 // Importing the necessary modules 
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
 import { 
@@ -13,6 +13,7 @@ import {
   Terminal, 
   Globe 
 } from 'lucide-react';
+import { AttentionSeeker } from 'react-awesome-reveal'; 
 
 /**
  * Contact Component
@@ -20,7 +21,9 @@ import {
  * Purpose: Technical support and inquiry portal for the Biometric AI system.
  */
 const Contact = () => {
-    // Setting necessary states for the contact form 
+    // Setting necessary states for the contact form and 
+    // animation 
+    const [animateKey, setAnimateKey] = useState(0); 
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -47,6 +50,18 @@ const Contact = () => {
         }, 1500);
     };
 
+    // Using use effect to animate the contact terminal 
+    useEffect(() => {
+        // Setting the interval 
+        const interval = setInterval(() => {
+            // Incrementing by 1 
+            setAnimateKey(prev => prev + 1); 
+        }, 7000); 
+
+        // Clearing the interval 
+        return () => clearInterval(interval); 
+    }, []); 
+
     // Rendering the contact jsx page 
     return (
         <Fragment>
@@ -57,12 +72,14 @@ const Contact = () => {
                 <main className="max-w-7xl mx-auto px-4 py-12">
                     
                     {/* Page Header Section */}
-                    <div className="mb-16 border-l-4 border-indigo-600 pl-6">
-                        <h1 className="text-4xl font-bold tracking-tight text-slate-900">Contact Terminal</h1>
-                        <p className="text-slate-500 text-xs mt-1 uppercase tracking-widest font-mono">
-                            Communication Node // Secure Message Uplink
-                        </p>
-                    </div>
+                    <AttentionSeeker key={animateKey} effect='shake' cascade damping={4000} duration={7000}>
+                        <div className="mb-16 border-l-4 border-indigo-600 pl-6">
+                            <h1 className="text-4xl font-bold tracking-tight text-slate-900">Contact Terminal</h1>
+                            <p className="text-slate-500 text-xs mt-1 uppercase tracking-widest font-mono">
+                                Communication Node // Secure Message Uplink
+                            </p>
+                        </div>
+                    </AttentionSeeker>
 
                     <div className="grid lg:grid-cols-3 gap-12">
                         

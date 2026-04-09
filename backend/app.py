@@ -21,12 +21,13 @@
 
 # Importing the necessary modules 
 import os 
-import logging 
+import logging
 from flask_cors import CORS 
 from datetime import timedelta 
 from dotenv import load_dotenv, find_dotenv 
 from logFormatter.logFormatter import YellowConsoleFormatter
 from flask import Flask, url_for, session, request, redirect, jsonify 
+
 
 # Importing the necessary routes 
 from routes.login.loginRoute import login 
@@ -56,6 +57,10 @@ os.makedirs(logsDir, exist_ok=True)
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 logging.getLogger('pymongo').setLevel(logging.WARNING)
+
+# Removing the console warning error about working in  
+# A production environment 
+logging.getLogger("werkzeug").setLevel(logging.ERROR)
 
 # Clear existing handlers to prevent duplicate messages
 if logger.hasHandlers():
