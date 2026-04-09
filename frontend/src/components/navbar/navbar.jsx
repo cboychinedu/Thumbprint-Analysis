@@ -91,16 +91,16 @@ const Navbar = () => {
                         <div className="hidden md:flex items-center">
                             {isLoggedIn ? (
                                 <div className="flex gap-2">
-                                    <Link href="/dashboard" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:text-white transition-all font-bold text-indigo-600">
+                                    <Link href="/dashboard" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:border-slate-900 hover:text-white transition-all font-bold text-indigo-600">
                                         Dashboard
                                     </Link>
-                                    <Link href="/dashboard/history" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:text-white transition-all font-bold text-indigo-600">
+                                    <Link href="/dashboard/history" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:border-slate-900 hover:text-white transition-all font-bold text-indigo-600">
                                         History
                                     </Link>
-                                    <Link href="/dashboard/profile" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:text-white transition-all font-bold text-indigo-600"> 
+                                    <Link href="/dashboard/profile" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:border-slate-900 hover:text-white transition-all font-bold text-indigo-600"> 
                                         Profile 
                                     </Link>
-                                    <Link href="/dashboard/settings" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:text-white transition-all font-bold text-indigo-600"> 
+                                    <Link href="/dashboard/settings" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:border-slate-900 hover:text-white transition-all font-bold text-indigo-600"> 
                                         Settings 
                                     </Link>
                                     <button

@@ -6,6 +6,7 @@ import Cookies from 'js-cookie';
 import Swal from 'sweetalert2';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
+import { AttentionSeeker } from 'react-awesome-reveal';
 import React, { useEffect, useState, Fragment } from 'react';
 import { Clock, User, Zap, Target, Download } from 'lucide-react';
 
@@ -17,6 +18,9 @@ const History = () => {
     // Setting the state for loading the history data 
     const [history, setHistory] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+
+    // Setting the state for the animation 
+    const [animateKey, setAnimateKey] = useState(0); 
 
     // Creating a function for deleting the history 
     const deleteItem = (event) => {
@@ -141,8 +145,17 @@ const History = () => {
 
     // Using use effect to render the data on componente mount. 
     useEffect(() => {
+        // Setting the interval 
+        const interval = setInterval(() => {
+            // Incrementing by 1 
+            setAnimateKey(prev => prev + 1); 
+        }, 7000)
+
         // Execute the function on component load once. 
         fetchHistory();
+
+        // Clearing the interval 
+        return () => clearInterval(interval); 
     }, []);
 
     // Rendering the JSX history component 
@@ -155,12 +168,14 @@ const History = () => {
                 {/* Main div */}
                 <main className="max-w-7xl mx-auto px-4 py-12">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-                        <div className="border-l-4 border-indigo-600 pl-6">
-                            <h1 className="text-3xl font-bold tracking-tight">Analysis History</h1>
-                            <p className="text-slate-500 text-xs mt-1 uppercase tracking-widest font-mono">
-                                Stored Biometric Logs // User Archive
-                            </p>
-                        </div>
+                        <AttentionSeeker key={animateKey} effect="shake" cascade damping={4000} duration={7000}> 
+                            <div className="border-l-4 border-indigo-600 pl-6">
+                                <h1 className="text-3xl font-bold tracking-tight">Analysis History</h1>
+                                <p className="text-slate-500 text-xs mt-1 uppercase tracking-widest font-mono">
+                                    Stored Biometric Logs // User Archive
+                                </p>
+                            </div>
+                        </AttentionSeeker>
 
                         {/* EXPORT ALL BUTTON */}
                         {!isLoading && history.length > 0 && (

@@ -3,9 +3,10 @@
 
 // Importing the necessary modules 
 import Cookies from 'js-cookie';
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
+import { AttentionSeeker } from 'react-awesome-reveal';
 import { Settings as SettingsIcon, UploadCloud, BrainCircuit, ShieldAlert, Save } from 'lucide-react';
 
 // Creating the settings component 
@@ -14,6 +15,9 @@ const Settings = () => {
   const [selectedZip, setSelectedZip] = useState(null);
   const [isTraining, setIsTraining] = useState(false);
   const [uploadStatus, setUploadStatus] = useState(null);
+
+  // Setting the state for the animation 
+  const [animateKey, setAnimateKey] = useState(0); 
 
   // Handling the ZIP file selection
   const handleZipChange = (e) => {
@@ -26,31 +30,44 @@ const Settings = () => {
     }
   };
 
+  // Using use effect to animate the System settings 
+  useEffect(() => {
+    // Setting the interval 
+    const interval = setInterval(() => {
+      // Incrementing by 1 
+      setAnimateKey(prev => prev + 1); 
+    }, 7000); 
+
+    // Clearing the interval 
+    return () => clearInterval(interval); 
+
+  }, []); 
+
   // Function to handle the ML Training Upload
-  const handleStartTraining = async () => {
-    if (!selectedZip) return;
-    setIsTraining(true);
+  // const handleStartTraining = async () => {
+  //   if (!selectedZip) return;
+  //   setIsTraining(true);
 
-    const formData = new FormData();
-    formData.append('dataset', selectedZip);
-    const userCookie = Cookies.get("x-auth-token");
+  //   const formData = new FormData();
+  //   formData.append('dataset', selectedZip);
+  //   const userCookie = Cookies.get("x-auth-token");
 
-    try {
-      const serverUrl = `${process.env.NEXT_PUBLIC_SERVER_URL}/dashboard/train`;
-      const response = await fetch(serverUrl, {
-        headers: { 'x-auth-token': userCookie },
-        method: 'POST',
-        body: formData,
-      });
+  //   try {
+  //     const serverUrl = `${process.env.NEXT_PUBLIC_SERVER_URL}/dashboard/train`;
+  //     const response = await fetch(serverUrl, {
+  //       headers: { 'x-auth-token': userCookie },
+  //       method: 'POST',
+  //       body: formData,
+  //     });
 
-      const data = await response.json();
-      setUploadStatus({ status: 'success', message: 'Dataset received. Training started in background.' });
-    } catch (error) {
-      setUploadStatus({ status: 'error', message: 'Failed to connect to Training Server.' });
-    } finally {
-      setIsTraining(false);
-    }
-  };
+  //     const data = await response.json();
+  //     setUploadStatus({ status: 'success', message: 'Dataset received. Training started in background.' });
+  //   } catch (error) {
+  //     setUploadStatus({ status: 'error', message: 'Failed to connect to Training Server.' });
+  //   } finally {
+  //     setIsTraining(false);
+  //   }
+  // };
 
   // Rendering the jsx component 
   return (
@@ -61,13 +78,15 @@ const Settings = () => {
       {/* Adding the main div */}
       <div className="min-h-screen bg-white text-slate-900 font-sans mb-[100px]">
         <main className="max-w-5xl mx-auto px-4 py-12">
-          {/* Header Section */}
-          <div className="mb-10 border-l-4 border-indigo-600 pl-6">
-            <h1 className="text-3xl font-bold tracking-tight text-slate-900">System Settings</h1>
-            <p className="text-slate-500 text-xs mt-1 uppercase tracking-widest font-mono">
-              Configuration // Neural Network Training
-            </p>
-          </div>
+          <AttentionSeeker key={animateKey} effect='shake' cascade damping={4000} duration={7000}> 
+            {/* Header Section */}
+            <div className="mb-10 border-l-4 border-indigo-600 pl-6">
+              <h1 className="text-3xl font-bold tracking-tight text-slate-900">System Settings</h1>
+              <p className="text-slate-500 text-xs mt-1 uppercase tracking-widest font-mono">
+                Configuration // Neural Network Training
+              </p>
+            </div>
+          </AttentionSeeker>
 
           <div className="grid lg:grid-cols-3 gap-8">
 
@@ -125,7 +144,6 @@ const Settings = () => {
                   </div>
 
                   <button
-                    onClick={handleStartTraining}
                     disabled={!selectedZip || isTraining}
                     className={`w-full py-4 text-xs font-bold uppercase tracking-widest transition-all rounded-xl flex items-center justify-center gap-2
                       ${!selectedZip || isTraining

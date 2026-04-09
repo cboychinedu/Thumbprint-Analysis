@@ -5,6 +5,7 @@
 import Cookies from 'js-cookie';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
+import { AttentionSeeker } from 'react-awesome-reveal';
 import React, { useEffect, useState, Fragment } from 'react';
 import { User, Mail, ShieldCheck, Database, Fingerprint, Activity } from 'lucide-react';
 
@@ -13,6 +14,9 @@ const Profile = () => {
     // Setting necessary states
     const [user, setUser] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
+
+    // Setting the state for the animation 
+    const [animateKey, setAnimateKey] = useState(0); 
 
     // Creating a function for loading the user profile data
     const fetchProfile = async () => {
@@ -43,7 +47,18 @@ const Profile = () => {
 
     // Using use effect to render data on mount
     useEffect(() => {
+        // Setting the interval 
+        const interval = setInterval(() => {
+            // Incrementing by 1 
+            setAnimateKey(prev => prev + 1); 
+        }, 7000); 
+
+        // Running the fetch profile on component mount 
         fetchProfile();
+
+        // Clearing the interval 
+        return () => clearInterval(interval); 
+
     }, []);
 
     // Rendering the JSX profile component
@@ -54,14 +69,15 @@ const Profile = () => {
 
             <div className="min-h-screen bg-white text-slate-900 font-sans mb-[100px]">
                 <main className="max-w-4xl mx-auto px-4 py-12">
-                    
-                    {/* Header Section */}
-                    <div className="mb-10 border-l-4 border-indigo-600 pl-6">
-                        <h1 className="text-3xl font-bold tracking-tight">Engineer Profile</h1>
-                        <p className="text-slate-500 text-xs mt-1 uppercase tracking-widest font-mono">
-                            Authorized Personnel // Credentials Management
-                        </p>
-                    </div>
+                    <AttentionSeeker key={animateKey} effect="shake" cascade damping={4000} duration={7000}> 
+                        {/* Header Section */}
+                        <div className="mb-10 border-l-4 border-indigo-600 pl-6">
+                            <h1 className="text-3xl font-bold tracking-tight">Engineer Profile</h1>
+                            <p className="text-slate-500 text-xs mt-1 uppercase tracking-widest font-mono">
+                                Authorized Personnel // Credentials Management
+                            </p>
+                        </div>
+                    </AttentionSeeker>
 
                     {isLoading ? (
                         <div className="flex justify-center py-20">

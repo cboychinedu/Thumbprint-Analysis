@@ -3,13 +3,15 @@
 
 // Importing the necessary modules 
 import Cookies from 'js-cookie';
-import React, { useState, Fragment } from 'react';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
+import { AttentionSeeker } from 'react-awesome-reveal'; 
+import React, { useState, Fragment, useEffect } from 'react';
 
 // Creating the dashboard component 
 const Dashboard = () => {
   // Setting the necessary states 
+  const [animateKey, setAnimateKey] = useState(0); 
   const [selectedImage, setSelectedImage] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [isUploading, setIsUploading] = useState(false);
@@ -80,6 +82,18 @@ const Dashboard = () => {
     }
   };
 
+  // Use effect 
+  useEffect(() => {
+    // Setting the interval 
+    const interval = setInterval(() => {
+      // Incrementing by 1 
+      setAnimateKey(prev => prev + 1); 
+    }, 7000); 
+
+    // Clearing the interval 
+    return () => clearInterval(interval); 
+  }, []); 
+
   // Rendering the component JSX 
   return (
     <Fragment>
@@ -89,12 +103,25 @@ const Dashboard = () => {
       {/* Main Background: Pure White */}
       <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-indigo-100 mb-[100px]">
         <main className="max-w-7xl mx-auto px-4 py-12">
-          {/* Header Section */}
-          <div className="mb-10 border-l-4 border-indigo-600 pl-6">
-            <h1 className="text-3xl font-bold tracking-tight text-slate-900">Analysis Terminal</h1>
-            <p className="text-slate-500 text-xs mt-1 uppercase tracking-widest font-mono">
-              System ID: 4092-X // Status: Ready
-            </p>
+          <AttentionSeeker key={animateKey} effect='shake' cascade damping={4000} duration={7000}> 
+            {/* Header Section */}
+            <div className="mb-10 border-l-4 border-indigo-600 pl-6">
+              <h1 className="text-3xl font-bold tracking-tight text-slate-900">Analysis Terminal</h1>
+              <p className="text-slate-500 text-xs mt-1 uppercase tracking-widest font-mono">
+                System ID: 4092-X // Status: Ready
+              </p>
+            </div>
+          </AttentionSeeker>
+
+          {/* Select Model Div */}
+          <div className="space-y-1 mb-[20px]"> 
+            <select
+              className="w-[200px] bg-slate-50 border border-blue-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all appearance-none"
+            > 
+              <option> Select ML Model </option>
+              <option> Default Model </option>
+            </select>
+            <p className="text-slate-500 text-[12px] mt-1"> <strong> N/B: </strong> Remember, if you do not select a machine learning model, <br /> it will assume you are choosing the <strong> default model. </strong> </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
