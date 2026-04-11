@@ -17,7 +17,7 @@ const Navbar = () => {
     // Creating a state for the login status, default to false 
     const [isLoggedIn, setisLoggedIn] = useState(false);
     const [mounted, setMounted] = useState(false);
-    
+
     // NEW: State to handle mobile menu toggle
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -71,7 +71,7 @@ const Navbar = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16 items-center">
                         {/* Logo */}
-                        <Link className="flex items-center gap-2 z-[60]" href={isLoggedIn ? "/dashboard": "/" }>
+                        <Link className="flex items-center gap-2 z-[60]" href={isLoggedIn ? "/dashboard" : "/"}>
                             <Fingerprint className="text-indigo-600 w-8 h-8" />
                             <span className="font-bold text-xl tracking-tight">ThumbPrint AI</span>
                         </Link>
@@ -79,11 +79,11 @@ const Navbar = () => {
                         {/* Desktop Middle Links (Hidden on Mobile) */}
                         {!isLoggedIn && (
                             <div className="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-                                <a href="/#how-it-works" className="hover:text-indigo-600 transition">How it Works</a>
-                                <a href="/#architecture" className="hover:text-indigo-600 transition">Architecture</a>
-                                <a href="/#setup" className="hover:text-indigo-600 transition">Setup</a>
-                                <a href="/about" className="hover:text-indigo-600 transition"> About </a>
-                                <a href="/contact" className="hover:text-indigo-600 transition-all"> Contact </a>
+                                <Link href="/#how-it-works" className="hover:text-indigo-600 transition">How it Works</Link>
+                                <Link href="/#architecture" className="hover:text-indigo-600 transition">Architecture</Link>
+                                <Link href="/#setup" className="hover:text-indigo-600 transition">Setup</Link>
+                                <Link href="/about" className="hover:text-indigo-600 transition"> About </Link>
+                                <Link href="/contact" className="hover:text-indigo-600 transition-all"> Contact </Link>
                             </div>
                         )}
 
@@ -97,11 +97,11 @@ const Navbar = () => {
                                     <Link href="/dashboard/history" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:border-slate-900 hover:text-white transition-all font-bold text-indigo-600">
                                         History
                                     </Link>
-                                    <Link href="/dashboard/profile" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:border-slate-900 hover:text-white transition-all font-bold text-indigo-600"> 
-                                        Profile 
+                                    <Link href="/dashboard/profile" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:border-slate-900 hover:text-white transition-all font-bold text-indigo-600">
+                                        Profile
                                     </Link>
-                                    <Link href="/dashboard/settings" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:border-slate-900 hover:text-white transition-all font-bold text-indigo-600"> 
-                                        Settings 
+                                    <Link href="/dashboard/settings" className="border border-indigo-600 px-5 py-2 text-sm rounded-md hover:bg-slate-900 hover:border-slate-900 hover:text-white transition-all font-bold text-indigo-600">
+                                        Settings
                                     </Link>
                                     <button
                                         className="bg-indigo-600 text-white px-5 py-2 rounded-[6px] text-sm font-semibold hover:bg-indigo-700 transition shadow-lg shadow-indigo-200"
@@ -124,7 +124,7 @@ const Navbar = () => {
 
                         {/* Mobile Toggle Button (Hidden on Desktop) */}
                         <div className="md:hidden flex items-center z-[60]">
-                            <button 
+                            <button
                                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                                 className="text-slate-600 p-2 focus:outline-none"
                             >
@@ -139,11 +139,11 @@ const Navbar = () => {
                     <div className="px-4 pt-2 pb-6 space-y-2 shadow-xl">
                         {!isLoggedIn ? (
                             <>
-                                <a href="/#how-it-works" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">How it Works</a>
-                                <a href="/#architecture" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">Architecture</a>
-                                <a href="/#setup" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">Setup</a>
-                                <a href="/about" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50"> About </a>
-                                <a href="/contact" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50"> Contact </a>
+                                <Link href="/#how-it-works" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">How it Works</Link>
+                                <Link href="/#architecture" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">Architecture</Link>
+                                <Link href="/#setup" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50">Setup</Link>
+                                <Link href="/about" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50"> About </Link>
+                                <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="block px-3 py-4 text-base font-medium text-slate-600 border-b border-slate-50"> Contact </Link>
                                 <div className="grid grid-cols-2 gap-3 pt-4">
                                     <Link href="/login" onClick={() => setIsMenuOpen(false)} className="text-center border border-indigo-600 py-3 rounded-md font-bold text-indigo-600">Login</Link>
                                     <Link href="/register" onClick={() => setIsMenuOpen(false)} className="text-center bg-indigo-600 text-white py-3 rounded-md font-bold">Register</Link>
