@@ -4,11 +4,11 @@
 // Importing the necessary modules 
 import Cookies from 'js-cookie';
 import React, { Fragment, useState } from 'react';
-import { 
-  Fingerprint, 
-  Mail, 
-  Lock, 
-  ArrowRight
+import {
+    Fingerprint,
+    Mail,
+    Lock,
+    ArrowRight
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -23,20 +23,21 @@ const Login = () => {
     const router = useRouter();
 
     // Setting the state for the alert visibility and messaging 
-    const [showAlert, setShowAlert] = useState(false); 
-    const [status, setStatus] = useState(null); 
+    const [showAlert, setShowAlert] = useState(false);
+    const [status, setStatus] = useState(null);
     const [alertMessage, setAlertMessage] = useState(null);
 
     // Setting the state for the input data 
-    const [email, setEmail] = useState(""); 
-    const [password, setPassword] = useState(""); 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [loginDuration, setLoginDuration] = useState("");
 
     // Creating a function for closing the alert box 
     const closeAlert = () => {
         // Setting the necessary states to null and false 
-        setShowAlert(false); 
-        setStatus(null); 
-        setAlertMessage(null); 
+        setShowAlert(false);
+        setStatus(null);
+        setAlertMessage(null);
     }
 
     // Creating a function for setting the cookies 
@@ -48,118 +49,119 @@ const Login = () => {
     // Creating a function for handling the login button 
     const handleLogin = async (event) => {
         // Prevent default submission 
-        event.preventDefault(); 
+        event.preventDefault();
 
         // Checking the email form 
         if (email.trim() === "") {
             // Showing the alert box 
-            setAlertMessage("Email address is required!"); 
-            setStatus("info"); 
-            setShowAlert(true); 
-            return; 
+            setAlertMessage("Email address is required!");
+            setStatus("info");
+            setShowAlert(true);
+            return;
         }
 
         // Checking if the does not contain the "@" symbol 
         else if (!email.includes("@")) {
             // Showing the alert box 
-            setAlertMessage("Email does not contain the @ symbol!"); 
-            setStatus("info"); 
-            setShowAlert(true); 
-            return; 
+            setAlertMessage("Email does not contain the @ symbol!");
+            setStatus("info");
+            setShowAlert(true);
+            return;
         }
 
         // Checking the password 
         else if (password.trim() === "") {
             // Showing the alert box 
-            setAlertMessage("Password field cannot be empty!"); 
-            setStatus("info"); 
-            setShowAlert(true); 
-            return; 
+            setAlertMessage("Password field cannot be empty!");
+            setStatus("info");
+            setShowAlert(true);
+            return;
         }
 
         // Else if all validations pass, execute the block of code below 
         else {
             // Getting the login data 
             const loginData = JSON.stringify({
-                email: email.trim(), 
-                password: password.trim()
-            }); 
+                email: email.trim(),
+                password: password.trim(),
+                loginDuration: loginDuration == true ? 30 : "",
+            });
 
             // Setting the backend server url 
-            const serverUrl = `${process.env.NEXT_PUBLIC_SERVER_URL}/login`; 
+            const serverUrl = `${process.env.NEXT_PUBLIC_SERVER_URL}/login`;
 
             // Using try catch block to send the request to the backend server 
             try {
                 // Making the request to the login page 
                 const response = await fetch(serverUrl, {
-                    method: 'POST', 
-                    headers: { 'Content-Type': 'application/json'}, 
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
                     body: loginData
-                }); 
+                });
 
                 // if there was no response from the server 
                 if (!response.ok) {
                     // Handle the server side error 
-                    const errorData = await response.json(); 
+                    const errorData = await response.json();
 
                     // Display the error message 
-                    setAlertMessage(errorData.message || "Login failed!"); 
-                    setStatus("error"); 
-                    setShowAlert(true); 
+                    setAlertMessage(errorData.message || "Login failed!");
+                    setStatus("error");
+                    setShowAlert(true);
 
                     // Auto hide the alert after 5 seconds 
-                    setTimeout(() => setShowAlert(false), 5000); 
-                    return; 
+                    setTimeout(() => setShowAlert(false), 5000);
+                    return;
                 }
 
                 // Else, if the server returned a response, get the response and 
                 // convert it into a json object 
                 else {
                     // Convert the data into a json object 
-                    const responseData = await response.json(); 
+                    const responseData = await response.json();
 
                     // if the user was logged in and a token was generated,
                     // execute this block of code 
                     if (responseData.status === "success") {
                         // Setting the cookie, and making it globally accessible 
-                        setCookie(responseData.token); 
-                        
+                        setCookie(responseData.token);
+
                         // Display the status message 
-                        setAlertMessage(responseData.message); 
-                        setStatus("success"); 
-                        setShowAlert(true); 
+                        setAlertMessage(responseData.message);
+                        setStatus("success");
+                        setShowAlert(true);
 
                         // Naviage the user to the dashboard page 
-                        router.push("/dashboard"); 
+                        router.push("/dashboard");
                     }
 
                     // Else, if the response data was an error 
                     else {
                         // Display the status message 
-                        setAlertMessage(responseData.message); 
-                        setStatus("error"); 
-                        setShowAlert(true); 
+                        setAlertMessage(responseData.message);
+                        setStatus("error");
+                        setShowAlert(true);
 
                         // Auto hide the error after 7 minutes 
-                        setTimeout(() => setShowAlert(false), 7000); 
-                        return; 
+                        setTimeout(() => setShowAlert(false), 7000);
+                        return;
                     }
                 }
-            } 
+            }
 
             // Catch the error 
             catch (error) {
                 // Log the error to the console 
-                console.log("error: ", error.message); 
+                console.log("error: ", error.message);
 
                 // Display the error message 
-                setAlertMessage("Error connecting to the server!"); 
-                setStatus("error"); 
-                setShowAlert(true); 
+                setAlertMessage("Error connecting to the server!");
+                setStatus("error");
+                setShowAlert(true);
 
                 // Auto hide the error after 7 seconds 
-                setTimeout(() => setShowAlert(false), 7000); 
-                return; 
+                setTimeout(() => setShowAlert(false), 7000);
+                return;
             }
         }
     }
@@ -168,11 +170,11 @@ const Login = () => {
     return (
         <Fragment>
             {/* Adding the navbar */}
-            <Navbar /> 
+            <Navbar />
 
             {/* Sliding Alert Component for feedback */}
             {showAlert && (
-                <AlertBox status={status} alertMessage={alertMessage} onClose={closeAlert} /> 
+                <AlertBox status={status} alertMessage={alertMessage} onClose={closeAlert} />
             )}
 
             {/* Adding the main div */}
@@ -222,7 +224,7 @@ const Login = () => {
 
                     {/* Right Side: Login Form */}
                     <div className="p-8 md:p-16 flex flex-col justify-center">
-                        <AttentionSeeker effect='bounce' cascade duration={8000}> 
+                        <AttentionSeeker effect='bounce' cascade duration={8000}>
                             <div className="mb-10 text-center md:text-left">
                                 <h1 className="text-3xl font-bold text-slate-900 mb-2">Welcome Back</h1>
                                 <p className="text-slate-500">Please enter your details to sign in.</p>
@@ -241,12 +243,12 @@ const Login = () => {
                                         className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition duration-200"
                                         onChange={(event) => {
                                             // Closing the alert 
-                                            closeAlert(); 
+                                            closeAlert();
 
                                             // Setting the email 
-                                            setEmail(event.target.value); 
+                                            setEmail(event.target.value);
                                         }}
-                                   />
+                                    />
                                 </div>
                             </div>
 
@@ -264,25 +266,31 @@ const Login = () => {
                                         className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition duration-200"
                                         onChange={(event) => {
                                             // Closing the alert 
-                                            closeAlert(); 
+                                            closeAlert();
 
                                             // Setting the password 
-                                            setPassword(event.target.value); 
+                                            setPassword(event.target.value);
                                         }}
                                     />
                                 </div>
                             </div>
 
                             <div className="flex items-center gap-2 py-2">
-                                <input type="checkbox" id="remember" className="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500" />
+                                <input
+                                    type="checkbox"
+                                    id="remember"
+                                    checked={loginDuration}
+                                    className="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                                    onChange={(event) => setLoginDuration(event.target.checked)}
+                                />
                                 <label htmlFor="remember" className="text-sm text-slate-600 select-none">Remember for 30 days</label>
                             </div>
 
-                            <button 
+                            <button
                                 className="w-full bg-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-indigo-700 transition shadow-lg shadow-indigo-100 flex items-center justify-center gap-2 group"
                                 onClick={handleLogin}
                             >
-                                Login 
+                                Login
                                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </button>
                         </form>
@@ -303,7 +311,7 @@ const Login = () => {
             </div>
 
             {/* Adding the footer  */}
-            <Footer /> 
+            <Footer />
         </Fragment>
     )
 }

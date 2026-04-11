@@ -32,7 +32,7 @@ def analyseThumbPrint():
         userToken = request.headers.get("x-auth-token")
         decodedToken = jwt.decode(userToken, secretKey, algorithms=["HS256"], options={"verify_signature": True})
         
-        # Get the user email address 
+        # Getting the user email address 
         email = decodedToken["email"]
         
         # If no file is part of the request, return an error message 
@@ -57,6 +57,19 @@ def analyseThumbPrint():
             
         # if the file name was provided 
         if thumbprint:
+            # Check if the user is still on the database 
+            userData = db.getUsersInformation("users", email)
+            
+            # if the user is no longer on our database, 
+            # Execute the block of code below 
+            if not userData: 
+                # Send the error message
+                return jsonify({
+                    "status": "error", 
+                    "message": "Invalid user!", 
+                    "statusCode": 404
+                })
+                
             # Sanitize the file name 
             filename = secure_filename(thumbprint.filename)
             
@@ -86,7 +99,7 @@ def analyseThumbPrint():
             # Creating the database data
             databaseData = {
                 "email": email, 
-                "owner": str(result),
+                "predictedResult": str(result),
                 "status": "success", 
                 "confidence": str(confidence), 
                 "latency": str(latency), 
@@ -103,7 +116,7 @@ def analyseThumbPrint():
             responseMessage = {
                 "message": "Thumbprint detected!",
                 "status": "success", 
-                "owner": str(result), 
+                "predictedResult": str(result), 
                 "confidence": str(confidence), 
                 "latency": str(latency), 
                 "timestamp": formattedTime
@@ -123,6 +136,24 @@ def analyseThumbPrint():
             
             # Sending the error message 
             return jsonify(responseMessage)
+        
+    # Expired signature error 
+    except jwt.ExpiredSignatureError: 
+        # Return the error response 
+        return jsonify({
+            "message": "Token has expired", 
+            "status": "error", 
+            "statusCode": 401 
+        })
+    
+    # Invalid Token Error 
+    except jwt.InvalidTokenError: 
+        # Return the error response 
+        return jsonify({
+            "message": "Invalid token", 
+            "status": "error", 
+            "statusCode": 401
+        })
         
     # Except exception as error 
     except Exception as error: 
@@ -147,7 +178,9 @@ def getUserProfile():
     try: 
         # Getting the user's token from the headers 
         userToken = request.headers.get("x-auth-token")
-        decodedToken = jwt.decode(userToken, secretKey, algorithms=["HS256"])
+        decodedToken = jwt.decode(userToken, secretKey, algorithms=["HS256"],  options={"verify_signature": True})
+        
+        # Getting the user email address 
         email = decodedToken["email"]
         
         # Getting the users information from the database 
@@ -171,7 +204,7 @@ def getUserProfile():
             # Sending the message 
             return jsonify(responseMessage) 
         
-        # else 
+        # else if the user was not found on the database 
         else: 
             # if the user data is not present 
             # Build a response message 
@@ -183,6 +216,24 @@ def getUserProfile():
             
             # Sending the error message 
             return jsonify(responseMessage)
+        
+    # Expired signature error 
+    except jwt.ExpiredSignatureError: 
+        # Return the error response 
+        return jsonify({
+            "message": "Token has expired", 
+            "status": "error", 
+            "statusCode": 401 
+        })
+    
+    # Invalid Token Error 
+    except jwt.InvalidTokenError: 
+        # Return the error response 
+        return jsonify({
+            "message": "Invalid token", 
+            "status": "error", 
+            "statusCode": 401
+        })
         
     # Exception as error 
     except Exception as error: 
@@ -214,8 +265,25 @@ def getThumbprintHistory():
             })
             
         # Decode the token 
-        decodedToken = jwt.decode(userToken, secretKey, algorithms=["HS256"])
+        decodedToken = jwt.decode(userToken, secretKey, algorithms=["HS256"],  options={"verify_signature": True})
+        
+        # Getting the user email address 
         email = decodedToken["email"]
+        
+        # Verify if the user exists on the database 
+        usersData = db.getUsersInformation("users", email)
+        
+        # Checking if the user exists 
+        if not usersData: 
+            # Build the error message 
+            errorResponse = {
+                "message": "User no longer exists or account is invalid!", 
+                "status": "error", 
+                "statusCode": 404
+            }
+            
+            # Sending the error response 
+            return jsonify(errorResponse)
         
         # Getting the users history 
         usersHistory = db.getUsersAnalyzedHistory("thumbprintAnalysis", email)
@@ -225,6 +293,24 @@ def getThumbprintHistory():
             "status": "success", 
             "history": usersHistory, 
             "statusCode": 200
+        })
+    
+    # Expired signature error 
+    except jwt.ExpiredSignatureError: 
+        # Return the error response 
+        return jsonify({
+            "message": "Token has expired", 
+            "status": "error", 
+            "statusCode": 401 
+        })
+    
+    # Invalid Token Error 
+    except jwt.InvalidTokenError: 
+        # Return the error response 
+        return jsonify({
+            "message": "Invalid token", 
+            "status": "error", 
+            "statusCode": 401
         })
     
     # Except exception as error 
@@ -253,7 +339,7 @@ def deleteAnalysis():
             })
             
         # Decode the token 
-        decodedToken = jwt.decode(userToken, secretKey, algorithms=["HS256"])
+        decodedToken = jwt.decode(userToken, secretKey, algorithms=["HS256"], options={"verify_signature": True})
         email = decodedToken["email"]
         
         # Getting the user key/_id value 
@@ -293,3 +379,13 @@ def deleteAnalysis():
         
         # Sending the error message 
         return jsonify(errorResponse)
+    
+# Creating a route for downloading a single analysis 
+@dashboard.route("/single-download/<id>", methods=["GET"])
+def singleDownloadUsersAnalyzedData(id:int): 
+    pass 
+
+# Creating a route for downloading all the user's analysis 
+@dashboard.route("/multiple-downloads", methods=["GET"])
+def multipleDownloadUsersAnalyzedData(): 
+    pass 

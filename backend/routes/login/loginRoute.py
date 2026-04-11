@@ -26,6 +26,7 @@ def loginPage():
         # Getting the individal data 
         email = userData["email"]
         password = userData["password"]
+        loginDuration = int(userData.get("loginDuration") or 10)
         
         # Checking if the user is already registered on the database 
         result = db.getUsersInformation("users", email=email)
@@ -67,7 +68,7 @@ def loginPage():
                 payload = {
                     "email": email, 
                     "fullname": result["fullname"], 
-                    "exp": datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=31),
+                    "exp": datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=loginDuration),
                     "isLoggedIn": True 
                 }
                 

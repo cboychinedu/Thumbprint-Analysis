@@ -95,7 +95,7 @@ class MongoDB(HandleDownloadAnalyzedHistory):
         cursor = collection.find(query, {
             "_id": 1, 
             "email": 1, 
-            "owner": 1, 
+            "predictedResult": 1, 
             "status": 1, 
             "confidence": 1, 
             "latency": 1, 
