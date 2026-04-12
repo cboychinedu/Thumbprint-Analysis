@@ -186,7 +186,7 @@ const History = () => {
                         </AttentionSeeker>
 
                         {/* EXPORT ALL BUTTON */}
-                        {!isLoading && Array.isArray(history) ? (
+                        {!isLoading && Array.isArray(history) && history.length > 0 ? (
                             <button
                                 // onClick={downloadAllHistory}
                                 className="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl text-sm font-bold uppercase tracking-widest transition-all shadow-lg shadow-indigo-100"

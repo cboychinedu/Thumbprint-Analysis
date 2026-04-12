@@ -1805,3 +1805,206 @@
 2026-04-11 05:25:15 - INFO -  * Restarting with stat
 2026-04-11 05:25:19 - WARNING -  * Debugger is active!
 2026-04-11 05:25:19 - INFO -  * Debugger PIN: 133-917-514
+2026-04-12 14:52:33 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-12 14:52:33 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-12 14:52:52 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://172.20.10.2:3001
+2026-04-12 14:52:52 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-12 14:52:52 - INFO -  * Restarting with stat
+2026-04-12 14:52:55 - WARNING -  * Debugger is active!
+2026-04-12 14:52:55 - INFO -  * Debugger PIN: 133-917-514
+2026-04-12 14:53:44 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-12 14:53:44 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:44] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-12 14:53:44 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-12 14:53:44 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:44] "POST /login HTTP/1.1" 200 -
+2026-04-12 14:53:44 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:44 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:44 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:44] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:44 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:44] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:44 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:44 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:44] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:44 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:44 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:44] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:49 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:53:49 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:49] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:53:49 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:53:49 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:49] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:53:49 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:53:49 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:49] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:53:49 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:53:49 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:49] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:53:50 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:50 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:50 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:50] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:50 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:50] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:50 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:50 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:50] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:50 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:50 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:50] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:51 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:51 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:51] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:51 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:51 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:51] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:52 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:52 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:52] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:52 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:52 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:52] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:56 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:56 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:56] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:56 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:56 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:56] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:56 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:56 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:56] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:56 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:56 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:56] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:58 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:58 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:58] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:53:58 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:53:58 - INFO - 127.0.0.1 - - [12/Apr/2026 14:53:58] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:55:00 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:55:00 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:55:00 - INFO - 127.0.0.1 - - [12/Apr/2026 14:55:00] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:55:00 - INFO - 127.0.0.1 - - [12/Apr/2026 14:55:00] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:55:00 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:55:00 - INFO - 127.0.0.1 - - [12/Apr/2026 14:55:00] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:55:00 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:55:00 - INFO - 127.0.0.1 - - [12/Apr/2026 14:55:00] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:55:24 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:55:24 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:55:24 - INFO - 127.0.0.1 - - [12/Apr/2026 14:55:24] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:55:24 - INFO - 127.0.0.1 - - [12/Apr/2026 14:55:24] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:55:24 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:55:24 - INFO - 127.0.0.1 - - [12/Apr/2026 14:55:24] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:55:24 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:55:24 - INFO - 127.0.0.1 - - [12/Apr/2026 14:55:24] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:56:47 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:56:47 - INFO - 127.0.0.1 - - [12/Apr/2026 14:56:47] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:56:47 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:56:47 - INFO - 127.0.0.1 - - [12/Apr/2026 14:56:47] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:56:50 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:56:50 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:56:50 - INFO - 127.0.0.1 - - [12/Apr/2026 14:56:50] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:56:50 - INFO - 127.0.0.1 - - [12/Apr/2026 14:56:50] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:56:50 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:56:50 - INFO - 127.0.0.1 - - [12/Apr/2026 14:56:50] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:56:50 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:56:50 - INFO - 127.0.0.1 - - [12/Apr/2026 14:56:50] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:57:09 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-04-12 14:57:09 - INFO - 127.0.0.1 - - [12/Apr/2026 14:57:09] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-04-12 14:57:09 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-04-12 14:57:10 - INFO - 127.0.0.1 - - [12/Apr/2026 14:57:10] "POST /dashboard HTTP/1.1" 200 -
+2026-04-12 14:57:13 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:57:13 - INFO - 127.0.0.1 - - [12/Apr/2026 14:57:13] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:57:13 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:57:13 - INFO - 127.0.0.1 - - [12/Apr/2026 14:57:13] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:57:13 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:57:13 - INFO - 127.0.0.1 - - [12/Apr/2026 14:57:13] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:57:13 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:57:13 - INFO - 127.0.0.1 - - [12/Apr/2026 14:57:13] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:57:17 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-04-12 14:57:17 - INFO - 127.0.0.1 - - [12/Apr/2026 14:57:17] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-04-12 14:57:17 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-04-12 14:57:17 - INFO - 127.0.0.1 - - [12/Apr/2026 14:57:17] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-04-12 14:59:08 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:59:08 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:59:08 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:08] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:59:08 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:08] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:59:08 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:59:08 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:08] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:59:08 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:59:08 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:08] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:59:11 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:59:11 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:11] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:59:11 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:59:12 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:12] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:59:12 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:59:12 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:12] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:59:12 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 14:59:12 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:12] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 14:59:13 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:59:13 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:13] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:59:13 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:59:13 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:13] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:59:13 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:59:13 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:13] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:59:13 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:59:13 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:13] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:59:22 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:59:22 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:59:22 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:22] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:59:22 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:22] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:59:22 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:59:22 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:22] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 14:59:22 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 14:59:22 - INFO - 127.0.0.1 - - [12/Apr/2026 14:59:22] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:16:37 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:16:37 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:16:37 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:37] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:16:37 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:37] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:16:37 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:16:37 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:37] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:16:37 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:16:37 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:37] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:16:38 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 15:16:38 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 15:16:38 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:38] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 15:16:38 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:38] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 15:16:38 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 15:16:38 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:38] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 15:16:38 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 15:16:38 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:38] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 15:16:39 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:16:39 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:39] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:16:39 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:16:39 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:39] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:16:43 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:16:43 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:16:43 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:43] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:16:43 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:43] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:16:43 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:16:43 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:43] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:16:43 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:16:43 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:43] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:16:47 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:16:47 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:47] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:16:47 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:16:47 - INFO - 127.0.0.1 - - [12/Apr/2026 15:16:47] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:19:55 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-04-12 15:19:55 - INFO - 127.0.0.1 - - [12/Apr/2026 15:19:55] "OPTIONS /login HTTP/1.1" 200 -
+2026-04-12 15:19:55 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-04-12 15:19:55 - INFO - 127.0.0.1 - - [12/Apr/2026 15:19:55] "POST /login HTTP/1.1" 200 -
+2026-04-12 15:19:55 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:19:55 - INFO - 127.0.0.1 - - [12/Apr/2026 15:19:55] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:19:55 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:19:55 - INFO - 127.0.0.1 - - [12/Apr/2026 15:19:55] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:19:55 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:19:55 - INFO - 127.0.0.1 - - [12/Apr/2026 15:19:55] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:19:55 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:19:55 - INFO - 127.0.0.1 - - [12/Apr/2026 15:19:55] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:19:59 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 15:19:59 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-04-12 15:19:59 - INFO - 127.0.0.1 - - [12/Apr/2026 15:19:59] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 15:19:59 - INFO - 127.0.0.1 - - [12/Apr/2026 15:19:59] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-04-12 15:19:59 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 15:19:59 - INFO - 127.0.0.1 - - [12/Apr/2026 15:19:59] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 15:19:59 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-04-12 15:19:59 - INFO - 127.0.0.1 - - [12/Apr/2026 15:19:59] "GET /dashboard/history HTTP/1.1" 200 -
+2026-04-12 15:20:02 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:20:02 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:20:02 - INFO - 127.0.0.1 - - [12/Apr/2026 15:20:02] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:20:02 - INFO - 127.0.0.1 - - [12/Apr/2026 15:20:02] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:20:02 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:20:02 - INFO - 127.0.0.1 - - [12/Apr/2026 15:20:02] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:20:02 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:20:02 - INFO - 127.0.0.1 - - [12/Apr/2026 15:20:02] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:20:10 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:20:10 - INFO - 127.0.0.1 - - [12/Apr/2026 15:20:10] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:20:10 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:20:10 - INFO - 127.0.0.1 - - [12/Apr/2026 15:20:10] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:20:10 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:20:10 - INFO - 127.0.0.1 - - [12/Apr/2026 15:20:10] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-04-12 15:20:10 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-04-12 15:20:10 - INFO - 127.0.0.1 - - [12/Apr/2026 15:20:10] "GET /dashboard/profile HTTP/1.1" 200 -

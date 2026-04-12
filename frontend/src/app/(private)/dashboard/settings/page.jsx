@@ -13,6 +13,7 @@ import {
   BrainCircuit,
   ShieldAlert,
   Save,
+  Apple
 } from "lucide-react";
 
 // Creating the settings component
@@ -167,6 +168,9 @@ const Settings = () => {
                 </button>
                 <button className="w-full flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 rounded-xl font-bold text-sm transition-all">
                   <BrainCircuit size={18} /> ML Training
+                </button>
+                <button className="w-full flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 rounded-xl font-bold text-sm transition-all">
+                  <Apple size={18} /> ML models
                 </button>
               </aside>
 
