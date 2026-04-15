@@ -5,8 +5,9 @@ import os
 import jwt 
 import json
 import base64
+import bcrypt
 from datetime import datetime
-from database.database import db
+from database.users.usersDatabase import db
 from werkzeug.utils import secure_filename
 from flask import jsonify, request, Blueprint
 from machineLearning.machineLearning import MachineLearning
@@ -379,7 +380,123 @@ def deleteAnalysis():
         
         # Sending the error message 
         return jsonify(errorResponse)
+
+# Creating a route for changing the password 
+@dashboard.route("/update-password", methods=["PUT"])
+def changePassword(): 
+    # Using try catch block to get the user's request 
+    try: 
+        # Authenticate the user via token 
+        userToken = request.headers.get("x-auth-token")
+        
+        # Getting the user's password 
+        usersPasswords = request.get_json()
+        newPassword = usersPasswords["newPassword"]
+        oldPassword = usersPasswords["oldPassword"]
+        
+        # if the user token is not present 
+        if not userToken: 
+            # Return the following json object below 
+            return jsonify({
+                "message": "Unauthorized", 
+                "status": "error", 
+                "statusCode": 401 
+            })
+            
+        # Decode the token 
+        decodedToken = jwt.decode(
+            userToken, 
+            secretKey, 
+            algorithms=["HS256"], 
+            options={"verify_signature": True}
+        )
+        
+        # Getting the user email 
+        email = decodedToken["email"]
+        
+        # Verify if the user exists on the database 
+        usersData = db.getUsersInformation("users", email)
+        
+        # Checking if the user exists 
+        if not usersData: 
+            # Build the error message 
+            errorResponse = {
+                "message": "User no longer exists or account is invalid!", 
+                "status": "error", 
+                "statusCode": 404
+            }
+            
+            # Sending the error response 
+            return jsonify(errorResponse)
+        
+        # Else if the result exists, execute the block of code below 
+        else: 
+            # Converting the result into a json object
+            usersData = json.loads(usersData)
+            
+            # Getting the password hash from the database 
+            storedPasswordHash = usersData["password"]
+            
+            # if the hash is stored as the string "b"$2b098...", strip the wrappers
+            if storedPasswordHash.startswith("b") and storedPasswordHash.endswith("'"): 
+                storedPasswordHash = storedPasswordHash[2:-1]
+                
+            # Convert the password into bytes formats 
+            oldPassword = oldPassword.encode("utf-8")
+            hashedPassword = storedPasswordHash.encode("utf-8")
+            
+            # Verifying the password hash 
+            condition = bcrypt.checkpw(oldPassword, hashedPassword)
+            
+            # if the passwords are correct, change the old password with the new password 
+            if (condition): 
+                # Hash the new password 
+                newPassword = bytes(newPassword.encode("utf-8"))
+                passwordHash = bcrypt.hashpw(newPassword, bcrypt.gensalt(5))
+                
+                # Save the new hash password inside the database 
+                result = db.updateUsersPassword(email=email, newPassword=passwordHash, collectionName="users")
+                
+                # If the result is not None, execute the block of code below 
+                if not result: 
+                    # Build the error message 
+                    errorResponse = {
+                        "message": "Unable to change password!", 
+                        "status": "error", 
+                        "statusCode": 404
+                    }
+                    
+                    # Sending the error response 
+                    return jsonify(errorResponse)
+                
+                # Else if the password was updated, execute the block of code below 
+                else: 
+                    # Send back the success message 
+                    return jsonify(result);
+            
+            # if the passwords are not correct 
+            else: 
+                # Return the error message 
+                return jsonify({
+                    "message": "Incorrect password", 
+                    "status": "error", 
+                    "statusCode": 400 
+                })
+            
+               
+    # On exceptions generated, execute the block of code below 
+    except Exception as error: 
+        # Building the error response 
+        errorResponse = {
+            "message": str(error), 
+            "status": "error", 
+            "statusCode": 500
+        }
+        
+        # Sending the error message 
+        return jsonify(errorResponse)
     
+
 # Creating a route for downloading a single analysis 
 @dashboard.route("/single-download/<id>", methods=["GET"])
 def singleDownloadUsersAnalyzedData(id:int): 

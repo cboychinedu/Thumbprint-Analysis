@@ -29,10 +29,11 @@ from logFormatter.logFormatter import YellowConsoleFormatter
 from flask import Flask, url_for, session, request, redirect, jsonify 
 
 
-# Importing the necessary routes 
-from routes.login.loginRoute import login 
-from routes.register.registerRoute import register
-from routes.dashboard.dashboardRoute import dashboard
+# Importing the users routes
+from routes.users.usersRoute import users
+
+# Importing the admin routes 
+from routes.admin.adminRoute import admin
 
 # Loading the environment variables 
 load_dotenv(find_dotenv(), verbose=True) 
@@ -135,10 +136,11 @@ def dated_url_for(endpoint, **values):
 def override_url_for():
     return dict(url_for=dated_url_for) 
 
-# Registering the blueprint 
-app.register_blueprint(login, url_prefix="/login")
-app.register_blueprint(register, url_prefix="/register")
-app.register_blueprint(dashboard, url_prefix="/dashboard")
+# Registering the blueprint for normal users 
+app.register_blueprint(users, url_prefix="/")
+
+# Registering the blueprint for admin 
+app.register_blueprint(admin, url_prefix="/admin")
 
 # Running the backend server 
 if __name__ == "__main__": 

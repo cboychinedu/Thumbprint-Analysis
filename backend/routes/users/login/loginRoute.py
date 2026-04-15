@@ -6,13 +6,13 @@ import jwt
 import json
 import bcrypt 
 import datetime 
-from database.database import db
+from database.users.usersDatabase import db
 from flask import jsonify, request, Blueprint 
 
 # Getting the secret key 
 secretKey = os.getenv("SECRET_KEY")
 
-# Creating the login route blueprint 
+# Creating the login blueprint route 
 login = Blueprint("login", __name__) 
 
 # Creating the root route for the login page 
@@ -43,7 +43,7 @@ def loginPage():
             # Sending the response message 
             return jsonify(responseMessage)
         
-        # Else if the result exists, exist the block of code 
+        # Else if the result exists, execute the block of code 
         else: 
             # Converting the result into a json object 
             result = json.loads(result)

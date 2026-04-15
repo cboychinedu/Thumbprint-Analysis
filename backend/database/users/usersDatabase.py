@@ -5,7 +5,7 @@ import os
 import json 
 from pymongo import MongoClient
 from bson.objectid import ObjectId
-from database.downloadUsersData import HandleDownloadAnalyzedHistory
+from database.users.downloadUsersData import HandleDownloadAnalyzedHistory
 
 # Creating a class for handling the database connection 
 class MongoDB(HandleDownloadAnalyzedHistory): 
@@ -29,7 +29,7 @@ class MongoDB(HandleDownloadAnalyzedHistory):
             # Display the error 
             print(f"[ERROR]: Error connecting to the database. {str(error)}")
             
-            # Set the cline, and db as None 
+            # Set the clinet, and db as None 
             self.client = None
             self.db = None
         
@@ -118,6 +118,43 @@ class MongoDB(HandleDownloadAnalyzedHistory):
         # Return the json object 
         return jsonData; 
     
+    # Creating a method updating the users password 
+    def updateUsersPassword(self, email, newPassword, collectionName="users"):
+        # Create the query 
+        query = { "email": email }
+        
+        # Getting the collection object
+        collection = self.db[collectionName]
+        
+        # Changing the users password 
+        result = collection.update_one(
+            query, 
+            update={"$set": {"password": newPassword}}
+        )
+        
+        # if the deleted count is greater then zero(0) 
+        # Execute the block of code below 
+        if result.modified_count > 0: 
+            # Displaying the status 
+            print("[INFO]: Password changed successfully!")
+            
+            # Returning the status report 
+            return {
+                "status": "success", 
+                "message": "Password changed!", 
+                "statusCode": 200
+            }
+        
+        # Else if the deleted count is equal to zero, or less than 
+        # Execute the block of code below 
+        else: 
+            # Display the error report 
+            print("[INFO]: Update password failed: No matching record found!")
+            
+            # Return the error message 
+            return None; 
+        
+    
     # Creating a method for deleting the user's analyzed history data 
     def deleteUsersAnalyzedHistory(self, _id, email, collectionName="thumbprintAnalysis"):
         # Checking if the user is first registered on our database with the token email value 
@@ -163,7 +200,6 @@ class MongoDB(HandleDownloadAnalyzedHistory):
                 # Return the error message 
                 return None 
             
-
 
 # Creating a shared instance of the MongoDB class 
 db = MongoDB() 

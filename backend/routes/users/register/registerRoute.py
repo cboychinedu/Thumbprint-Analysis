@@ -3,7 +3,7 @@
 # Importing the necessary modules  
 import bcrypt
 from datetime import datetime
-from database.database import db
+from database.users.usersDatabase import db
 from flask import jsonify, request, Blueprint
 
 # Creating the register route blueprint 
@@ -48,6 +48,9 @@ def registerPage():
             
             # Saving the registerd user's data 
             result = db.saveUsersInformation("users", registeredData)
+            
+            # >>> Treat as Urgent 
+            print(result) 
             
             # Creating the success message 
             responseMessage = {
