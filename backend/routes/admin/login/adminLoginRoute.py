@@ -1,3 +1,5 @@
+#!/usr/bin/env python3 
+
 # Importing the necessary modules 
 from flask import Blueprint, jsonify
 

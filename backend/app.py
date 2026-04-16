@@ -28,7 +28,6 @@ from dotenv import load_dotenv, find_dotenv
 from logFormatter.logFormatter import YellowConsoleFormatter
 from flask import Flask, url_for, session, request, redirect, jsonify 
 
-
 # Importing the users routes
 from routes.users.usersRoute import users
 

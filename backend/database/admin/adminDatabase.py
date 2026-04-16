@@ -29,7 +29,7 @@ class AdminMongoDB:
             self.db = None 
     
     # Creating a method for saving the admin user's information 
-    def saveUsersInformation(self, collectionName, data): 
+    def saveAdminUsersInformation(self, collectionName, data): 
         # Getting the collection name 
         collection = self.db[collectionName]
         
@@ -40,7 +40,7 @@ class AdminMongoDB:
         return result.acknowledged
     
     # Creating a method for getting the admin's user information 
-    def getAdminUserInformation(self, collectionName, email): 
+    def getAdminUsersInformation(self, collectionName, email): 
         # Creating the mongodb query 
         query = { 'email': email }
         
