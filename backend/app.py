@@ -28,14 +28,14 @@ from dotenv import load_dotenv, find_dotenv
 from logFormatter.logFormatter import YellowConsoleFormatter
 from flask import Flask, url_for, session, request, redirect, jsonify 
 
+# Loading the environment variables 
+load_dotenv(find_dotenv(), verbose=True)
+
 # Importing the users routes
 from routes.users.usersRoute import users
 
 # Importing the admin routes 
-from routes.admin.adminRoute import admin
-
-# Loading the environment variables 
-load_dotenv(find_dotenv(), verbose=True) 
+from routes.admin.adminRoute import admin 
 
 # Creating the flask application 
 app = Flask(__name__, static_folder=None, template_folder=None)

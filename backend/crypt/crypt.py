@@ -9,9 +9,16 @@ from cryptography.fernet import Fernet
 class Cryptography:
     # Init method 
     def __init__(self):
-        # Load the encryption key 
-        self.encryptionKey = bytes(os.getenv("ENCRYPTION_KEY").encode()) 
-        self.cipherSuite = Fernet(self.encryptionKey)
+        # Using try except method to read the encryption key 
+        try: 
+            # Load the encryption key 
+            self.encryptionKey = bytes(os.getenv("ENCRYPTION_KEY").encode()) 
+            self.cipherSuite = Fernet(self.encryptionKey)
+        
+        # Except if the key is not found 
+        except Exception as error: 
+            # Raise an error 
+            raise Exception(error); 
         
     # Creating a method for decrypting the clearance code data 
     def decryptClearanceCode(self, clearanceCode:str) -> dict: 
@@ -19,8 +26,9 @@ class Cryptography:
         if (clearanceCode == ""): 
             # Building the clearance response data 
             clearanceResponseData = {
-                "status": "error", 
-                "message": "Clearance code missing"
+                "status": "info", 
+                "message": "Clearance code missing", 
+                "statusCode": 404
             }
             
             # Sending the error response 
@@ -36,7 +44,8 @@ class Cryptography:
             clearanceResponseData = {
                 "status": "success", 
                 "clearanceData": clearanceData, 
-                "message": "|Clearance data decrypted"
+                "message": "|Clearance data decrypted", 
+                "statusCode": 200
             }
             
             # Returning the response 
@@ -48,7 +57,8 @@ class Cryptography:
             # Create the error response 
             clearanceResponseData = {
                 "status": "error", 
-                "message": str(error)
+                "message": f"Invalid Key code {str(error)}", 
+                "statusCode": 500
             }
             
             # Sending the error response data 

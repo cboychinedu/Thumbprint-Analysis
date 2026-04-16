@@ -1,5 +1,5 @@
 // Using the client 
-"use client"; 
+"use client";
 
 // Importing the necessary modules 
 import React, { Fragment, useState } from 'react';
@@ -22,85 +22,85 @@ import { AttentionSeeker } from 'react-awesome-reveal';
 // Creating the register component 
 export default function Register() {
     // Setting the router 
-    const router = useRouter(); 
+    const router = useRouter();
 
     // Setting the state for the alert visibility and messaging 
-    const [showAlert, setShowAlert] = useState(false); 
-    const [status, setStatus] = useState(null); 
-    const [alertMessage, setAlertMessage] = useState(null); 
+    const [showAlert, setShowAlert] = useState(false);
+    const [status, setStatus] = useState(null);
+    const [alertMessage, setAlertMessage] = useState(null);
 
     // Setting the state for the input data
-    const [fullname, setFullname] = useState(""); 
-    const [email, setEmail] = useState(""); 
-    const [password, setPassword] = useState(""); 
-    const [confirmPassword, setConfirmPassword] = useState(""); 
+    const [fullname, setFullname] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     // Creating a function for closing the alert box 
     const closeAlert = () => {
         // Setting the necessary states to null and false 
-        setShowAlert(false); 
-        setStatus(null); 
-        setAlertMessage(null); 
+        setShowAlert(false);
+        setStatus(null);
+        setAlertMessage(null);
     }
 
     // Creating a function for handling the register button 
     const handleRegister = async (event) => {
         // Prevent default submission 
-        event.preventDefault(); 
+        event.preventDefault();
 
         // Checking the fullname 
         if (fullname === "") {
             // Showing the alert box 
-            setAlertMessage("Fullname is required!"); 
-            setStatus("info"); 
-            setShowAlert(true); 
-            return; 
+            setAlertMessage("Fullname is required!");
+            setStatus("info");
+            setShowAlert(true);
+            return;
         }
 
         // Checking the email 
         else if (email === "" || !email.includes("@")) {
             // Showing the alert box 
-            setAlertMessage("Email address is required!"); 
-            setStatus("info"); 
-            setShowAlert(true); 
-            return; 
+            setAlertMessage("Email address is required!");
+            setStatus("info");
+            setShowAlert(true);
+            return;
         }
 
         // Checking the password 
         else if (password.trim() === "") {
             // Showing the alert box 
-            setAlertMessage("Password field cannot be empty!"); 
-            setStatus("info"); 
-            setShowAlert(true); 
-            return; 
+            setAlertMessage("Password field cannot be empty!");
+            setStatus("info");
+            setShowAlert(true);
+            return;
         }
 
         // Checking the confirm password 
         else if (confirmPassword.trim() === "") {
             // Showing the alert box 
-            setAlertMessage("Please confirm your password!"); 
-            setStatus("info"); 
-            setShowAlert(true); 
-            return; 
+            setAlertMessage("Please confirm your password!");
+            setStatus("info");
+            setShowAlert(true);
+            return;
         }
 
         // Checking if the passwords match 
         else if (password.trim() !== confirmPassword.trim()) {
             // Showing the alert box 
-            setAlertMessage("Passwords do not match!"); 
-            setStatus("info"); 
-            setShowAlert(true); 
-            return; 
+            setAlertMessage("Passwords do not match!");
+            setStatus("info");
+            setShowAlert(true);
+            return;
         }
 
         // Else if all validations pass, execute the block of code below 
         else {
             // Getting the registration data 
             const registrationData = JSON.stringify({
-                fullname: fullname.trim(), 
-                email: email.trim(), 
-                password: password.trim() 
-            }); 
+                fullname: fullname.trim(),
+                email: email.trim(),
+                password: password.trim()
+            });
 
             // Setting the backend server url 
             const serverUrl = `${process.env.NEXT_PUBLIC_SERVER_URL}/register`;
@@ -109,43 +109,43 @@ export default function Register() {
             try {
                 // Making the request to the register route 
                 const response = await fetch(serverUrl, {
-                    method: 'POST', 
-                    headers: { 'Content-Type': 'application/json'}, 
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
                     body: registrationData
-                }); 
+                });
 
                 // if there was no response from the server 
                 if (!response.ok) {
                     // Handle the server side error 
-                    const errorData = await response.json(); 
+                    const errorData = await response.json();
 
                     // Display the error message 
-                    setAlertMessage(errorData.message || "Registration failed!"); 
-                    setStatus("error"); 
-                    setShowAlert(true); 
+                    setAlertMessage(errorData.message || "Registration failed!");
+                    setStatus("error");
+                    setShowAlert(true);
 
                     // Auto hide the alert after 5 seconds 
-                    setTimeout(() => setShowAlert(false), 5000); 
-                    return; 
+                    setTimeout(() => setShowAlert(false), 5000);
+                    return;
                 }
 
                 // Else if the server returned a response, get the response and 
                 // convert it into a json object 
                 else {
                     // Convert the data into json object 
-                    const responseData = await response.json(); 
+                    const responseData = await response.json();
 
                     // if the user was registered, execute this block of code 
                     if (responseData.status === "success") {
                         // Display the status message 
-                        setAlertMessage(responseData.message); 
-                        setStatus("success"); 
-                        setShowAlert(true); 
+                        setAlertMessage(responseData.message);
+                        setStatus("success");
+                        setShowAlert(true);
 
                         // Auto hide, and navigate the user to the login page 
                         setTimeout(() => {
                             // Hide the message 
-                            setShowAlert(false); 
+                            setShowAlert(false);
 
                             // Navigate the user to the login page 
                             router.push('/login')
@@ -155,13 +155,13 @@ export default function Register() {
                     // Else, if the response data was an error 
                     else {
                         // Display the status message 
-                        setAlertMessage(responseData.message); 
-                        setStatus("error"); 
-                        setShowAlert(true); 
+                        setAlertMessage(responseData.message);
+                        setStatus("error");
+                        setShowAlert(true);
 
-                        // Auto hide the error after 7 minutes 
-                        setTimeout(() => setShowAlert(false), 7000); 
-                        return; 
+                        // Auto hide the error after 7 seconds 
+                        setTimeout(() => setShowAlert(false), 7000);
+                        return;
                     }
                 }
             }
@@ -169,18 +169,17 @@ export default function Register() {
             // Catch the error 
             catch (error) {
                 // Log the error to the console 
-                console.log("error: ", error.message); 
+                console.log("error: ", error.message);
 
                 // Display the error message 
-                setAlertMessage("Error connecting to the server!"); 
-                setStatus("error"); 
-                setShowAlert(true); 
+                setAlertMessage("Error connecting to the server!");
+                setStatus("error");
+                setShowAlert(true);
 
                 // Auto hide the error after 7 seconds 
-                setTimeout(() => setShowAlert(false), 7000); 
-                return; 
+                setTimeout(() => setShowAlert(false), 7000);
+                return;
             }
-             
         }
     }
 
@@ -192,7 +191,7 @@ export default function Register() {
 
             {/* Sliding Alert Component for feedback */}
             {showAlert && (
-                <AlertBox status={status} alertMessage={alertMessage} onClose={closeAlert} /> 
+                <AlertBox status={status} alertMessage={alertMessage} onClose={closeAlert} />
             )}
 
             {/* Creating the main component */}
@@ -273,10 +272,10 @@ export default function Register() {
                                         className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition duration-200 text-sm"
                                         onChange={(event) => {
                                             // Closing the alert 
-                                            closeAlert(); 
+                                            closeAlert();
 
                                             // Setting the fullname 
-                                            setFullname(event.target.value); 
+                                            setFullname(event.target.value);
                                         }}
                                     />
                                 </div>
@@ -293,10 +292,10 @@ export default function Register() {
                                         className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition duration-200 text-sm"
                                         onChange={(event) => {
                                             // Closing the alert 
-                                            closeAlert(); 
+                                            closeAlert();
 
                                             // Setting the email 
-                                            setEmail(event.target.value); 
+                                            setEmail(event.target.value);
                                         }}
                                     />
                                 </div>
@@ -314,10 +313,10 @@ export default function Register() {
                                             className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition duration-200 text-sm"
                                             onChange={(event) => {
                                                 // Closing the alert 
-                                                closeAlert(); 
+                                                closeAlert();
 
                                                 // Setting the password 
-                                                setPassword(event.target.value); 
+                                                setPassword(event.target.value);
                                             }}
                                         />
                                     </div>
@@ -334,10 +333,10 @@ export default function Register() {
                                             className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition duration-200 text-sm"
                                             onChange={(event) => {
                                                 // Closing the alert 
-                                                closeAlert(); 
+                                                closeAlert();
 
                                                 // Setting the confirm password 
-                                                setConfirmPassword(event.target.value); 
+                                                setConfirmPassword(event.target.value);
                                             }}
                                         />
                                     </div>
@@ -349,7 +348,7 @@ export default function Register() {
                                     By registering, you agree to our <span className="text-indigo-600 font-medium cursor-pointer">Terms of Service</span> and <span className="text-indigo-600 font-medium cursor-pointer">Privacy Policy</span> regarding biometric data processing.
                                 </p>
 
-                                <button 
+                                <button
                                     className="w-full bg-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-indigo-700 transition shadow-lg shadow-indigo-100 flex items-center justify-center gap-2 group"
                                     onClick={handleRegister}
                                 >
@@ -367,7 +366,7 @@ export default function Register() {
             </div>
 
             {/* Adding the footer */}
-            <Footer /> 
+            <Footer />
         </Fragment>
     );
 }
