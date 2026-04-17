@@ -32,6 +32,9 @@ class MachineLearning:
         except Exception as error: 
             # Display the error message 
             print(f"Error occured: {error}")
+            
+            # Raise the error 
+            raise Exception(error); 
         
     # Creating a method for performing the inference 
     def performInference(self, imagePath): 

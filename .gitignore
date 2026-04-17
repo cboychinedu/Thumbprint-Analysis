@@ -1,4 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Ignoring the necessary dependencies for the project
 
 # dependencies for the frontend 
 frontend/build/
@@ -24,3 +24,7 @@ backend/.env
 # Ml models 
 backend/machineLearning/models/model.joblib
 /backend/machineLearning/models/model.joblib
+
+
+# Notebooks 
+notebooks/model.joblib
