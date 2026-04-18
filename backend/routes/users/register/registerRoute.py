@@ -28,7 +28,7 @@ def registerPage():
         
         # if the result is None 
         if result is None: 
-            # if the result is None, which means the user with the s
+            # if the result is None, which means the user with the 
             # Specified email is not registered on the database 
             # Encrypt the password 
             password = bytes(password.encode('utf-8'))
@@ -43,14 +43,11 @@ def registerPage():
                 "email": email, 
                 "fullname": fullname, 
                 "password": passwordHash, 
-                "date": fullDate
+                "dateCreated": fullDate
             }
             
-            # Saving the registerd user's data 
+            # Saving the registered user's data 
             result = db.saveUsersInformation("users", registeredData)
-            
-            # >>> Treat as Urgent 
-            print(result) 
             
             # Creating the success message 
             responseMessage = {

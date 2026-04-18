@@ -142,7 +142,7 @@ const Login = () => {
                         setStatus("error");
                         setShowAlert(true);
 
-                        // Auto hide the error after 7 minutes 
+                        // Auto hide the error after 7 seconds 
                         setTimeout(() => setShowAlert(false), 7000);
                         return;
                     }

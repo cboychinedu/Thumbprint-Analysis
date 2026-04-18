@@ -46,7 +46,8 @@ class MongoDB(HandleDownloadAnalyzedHistory):
             "_id": 1, 
             "fullname": 1, 
             "email": 1, 
-            "password": 1
+            "password": 1, 
+            "dateCreated": 1
         })
         
         # if the returned data type is None type, execute the block 
