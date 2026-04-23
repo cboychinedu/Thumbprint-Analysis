@@ -188,7 +188,7 @@ const Dashboard = () => {
                     machine learning model, <br /> it will assume you are
                     choosing the <strong> default model. </strong>{" "}
                   </p>
-                </div>
+                </div> 
 
                 <div className="grid lg:grid-cols-2 gap-8">
                   {/* Upload Section: White card with subtle border */}
