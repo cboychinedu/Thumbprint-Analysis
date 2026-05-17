@@ -80,7 +80,7 @@ fileHandler.setFormatter(fileFormatter)
 consoleHandler = logging.StreamHandler()
 consoleHandler.setLevel(logging.DEBUG)
 
-# Apply the green formatter to the console handler 
+# Apply the yellow formatter to the console handler 
 consoleHandler.setFormatter(YellowConsoleFormatter())
 
 # Add handlers to the logger

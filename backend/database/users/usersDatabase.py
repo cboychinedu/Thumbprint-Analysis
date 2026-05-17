@@ -11,6 +11,12 @@ from database.users.downloadUsersData import HandleDownloadAnalyzedHistory
 class MongoDB(HandleDownloadAnalyzedHistory): 
     # Initializing the class 
     def __init__(self): 
+        # Call the parent class __init__ method 
+        super().__init__() 
+        
+        # Ensure a base directory for exports exists
+        self.historyDir = "historyExports"
+         
         # Creating a variable for the client, and db
         uri = os.getenv("MONGODB_URI", "mongodb://localhost:27017/")
         dbName = os.getenv("MONGODB_DB_NAME", "thumbPrintAnalysis")
@@ -20,6 +26,10 @@ class MongoDB(HandleDownloadAnalyzedHistory):
             # Getting the user's database name, and uri 
             self.client = MongoClient(uri)
             self.db = self.client[dbName]
+            
+            # Create a history directory if it dosen't exist 
+            if not os.path.exists(self.historyDir): 
+                os.makedirs(self.historyDir)
             
             # Displaying the status message 
             # print(f"[INFO]: Connected to the MongoDB database.")
@@ -200,6 +210,38 @@ class MongoDB(HandleDownloadAnalyzedHistory):
                 
                 # Return the error message 
                 return None 
+            
+    # Creating a method for getting just one user history 
+    def getOneUserAnalyzedHistory(self, _id, email, collectionName="thumbprintAnalysis"): 
+        # Creating the mongodb query 
+        query = {"email": email, "_id": ObjectId(_id) }
+        
+        # Getting the collection name 
+        collection = self.db[collectionName]
+        
+        # Finding the history data 
+        result = collection.find(query, {
+            "_id": 1, 
+            "predictedResult": 1, 
+            "status": 1, 
+            "confidence": 1, 
+            "latency": 1, 
+            "encodedImage": 1, 
+            "timestamp": 1,
+            "type": 1   
+        })
+        
+        # Convert the history into a list 
+        historyList = list(result)
+        
+        # if the returned data type is None type, execute the block 
+        # of code below 
+        if not historyList: 
+            # Return None 
+            return None; 
+        
+        # Convert the MongoDB documents into a json object 
+        return historyList
             
 
 # Creating a shared instance of the MongoDB class 

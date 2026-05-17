@@ -151,6 +151,51 @@ const History = () => {
         }
     };
 
+    // Creating a function for fetching and downloading the history data 
+    const downloadOneHistoryData = async (idValue) => {
+        // Using try catch block to download the data 
+        try {
+            // Set the server url 
+            const serverUrl = `${process.env.NEXT_PUBLIC_SERVER_URL}/dashboard/single-download/${idValue}`; 
+
+            // Getting the response 
+            const response = await fetch(serverUrl, {
+                method: "GET", 
+                headers: { "Content-Type": "application/json", "x-auth-token": Cookies.get("x-auth-token")}
+            }); 
+
+            // if there was a bad response 
+            if (!response.ok) throw new Error("Download failed!"); 
+
+            // Convert the response to a Blob file 
+            const blob = await response.blob(); 
+
+            // Create a temporary URL for the blob file 
+            const url = window.URL.createObjectURL(blob); 
+
+            // Create a hidden anchor element and click it 
+            const link = document.createElement("a"); 
+            link.href = url; 
+
+            // Setting the file name 
+            link.setAttribute('download', "historyReport.zip"); 
+
+            // Append the link to the document link 
+            document.body.appendChild(link); 
+            link.click(); 
+
+            // Cleanup 
+            link.parentNode.removeChild(link); 
+            window.URL.revokeObjectURL(url); 
+        }
+
+        // Catch the error 
+        catch(error) {
+            // Display the error message 
+            console.log("Download error: ", error); 
+        }
+    }
+
     // Using use effect to render the data on componente mount. 
     useEffect(() => {
         // Setting the interval 
@@ -269,6 +314,7 @@ const History = () => {
                                                 <div>
                                                     <button
                                                         key={item._id}
+                                                        onClick={() => downloadOneHistoryData(item._id)}
                                                         className="bg-blue-800 hover:bg-blue-950 text-white text-[13px] py-2 px-4 rounded-lg font-semibold w-fit"
                                                     >
                                                         Download Analysis

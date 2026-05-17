@@ -9,8 +9,8 @@ import bcrypt
 from datetime import datetime
 from database.users.usersDatabase import db
 from werkzeug.utils import secure_filename
-from flask import jsonify, request, Blueprint
 from machineLearning.machineLearning import MachineLearning
+from flask import jsonify, request, Blueprint, send_from_directory
 
 # Creating a directory to store the thumbprint images 
 thumbPrintDir = "thumbPrintImages"
@@ -274,7 +274,7 @@ def getThumbprintHistory():
         # Verify if the user exists on the database 
         usersData = db.getUsersInformation("users", email)
         
-        # Checking if the user exists 
+        # Checking if the user does not exist
         if not usersData: 
             # Build the error message 
             errorResponse = {
@@ -499,8 +499,85 @@ def changePassword():
 
 # Creating a route for downloading a single analysis 
 @dashboard.route("/single-download/<id>", methods=["GET"])
-def singleDownloadUsersAnalyzedData(id:int): 
-    pass 
+def singleDownloadUsersAnalyzedData(id):
+    # Getting the request headers 
+    # Using try except block 
+    try: 
+        # Get the user token 
+        userToken = request.headers.get("x-auth-token")
+        
+        # if the user token is not present 
+        if not userToken: 
+            # Return the following json object below 
+            return jsonify({
+                "message": "Unauthorized", 
+                "status": "error", 
+                "statusCode": 401
+            })
+            
+        # Decode the token if it's present 
+        decodedToken = jwt.decode(userToken, secretKey, algorithms=["HS256"], options={"verify_signature": True})
+        
+        # Getting the user email address 
+        email = decodedToken["email"]
+        
+        # Verify if the user exists on the database 
+        usersData = db.getUsersInformation("users", email) 
+        
+        # Checking if the user does not exist
+        if not usersData: 
+            # Build the error message 
+            return jsonify({
+                "message": "User no longer exists or account is invalid!", 
+                "status": "error", 
+                "statusCode": 404
+            })
+            
+        # Getting the users history by the id value 
+        historyData = db.getOneUserAnalyzedHistory(_id=id, email=email)
+        historyResponse = db.compileSingleHistoryAsCsv(email=email, historyData=historyData)
+        
+        # Extract only the filename from the full path 
+        filename = os.path.basename(historyResponse.get("path"))
+        
+        # Checking the status of the history response 
+        if (historyResponse.get("status") == "success"): 
+            # Try sending the file 
+            try: 
+                # Sending the file 
+                return send_from_directory(
+                    directory="historyExports", 
+                    path=filename, 
+                    as_attachment=True
+                )
+            
+            # On error generated 
+            except Exception as error: 
+                # Display the error message 
+                print(f"[Error]: File not found!, {error}")
+                
+                # Returning the error message 
+                return jsonify({
+                    "status": "error", 
+                    "message": "File not found!", 
+                    "statusCode": 404
+                })
+    
+    # Displaying the error message 
+    except Exception as error:  
+        # Displaying the message 
+        print(f"[Error]: {error}")
+        
+        # Building the response message 
+        responseMessage = {
+            "status": "error", 
+            "message": str(error), 
+            "statusCode": 505
+        }
+        
+        # Sending the response message 
+        return jsonify(responseMessage)
+        
 
 # Creating a route for downloading all the user's analysis 
 @dashboard.route("/multiple-downloads", methods=["GET"])

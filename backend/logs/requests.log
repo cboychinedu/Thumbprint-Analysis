@@ -472,3 +472,755 @@
 2026-04-17 20:35:55 - INFO - 127.0.0.1 - - [17/Apr/2026 20:35:55] "OPTIONS /admin/register HTTP/1.1" 200 -
 2026-04-17 20:35:55 - INFO - Request: POST /admin/register - IP: 127.0.0.1
 2026-04-17 20:35:55 - INFO - 127.0.0.1 - - [17/Apr/2026 20:35:55] "POST /admin/register HTTP/1.1" 200 -
+2026-04-23 23:58:52 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://172.20.10.2:3001
+2026-04-23 23:58:52 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-23 23:58:52 - INFO -  * Restarting with stat
+2026-04-23 23:58:55 - WARNING -  * Debugger is active!
+2026-04-23 23:58:55 - INFO -  * Debugger PIN: 489-871-038
+2026-05-08 22:34:03 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://10.1.10.201:3001
+2026-05-08 22:34:03 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-08 22:34:03 - INFO -  * Restarting with stat
+2026-05-08 22:34:07 - WARNING -  * Debugger is active!
+2026-05-08 22:34:07 - INFO -  * Debugger PIN: 489-871-038
+2026-05-08 22:34:54 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-05-08 22:34:54 - INFO - 127.0.0.1 - - [08/May/2026 22:34:54] "OPTIONS /login HTTP/1.1" 200 -
+2026-05-08 22:34:54 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-05-08 22:34:54 - INFO - 127.0.0.1 - - [08/May/2026 22:34:54] "POST /login HTTP/1.1" 200 -
+2026-05-08 22:34:54 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:34:54 - INFO - 127.0.0.1 - - [08/May/2026 22:34:54] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:34:54 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:34:54 - INFO - 127.0.0.1 - - [08/May/2026 22:34:54] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:34:54 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:34:54 - INFO - 127.0.0.1 - - [08/May/2026 22:34:54] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:34:54 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:34:54 - INFO - 127.0.0.1 - - [08/May/2026 22:34:54] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:34:58 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:34:58 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:34:58 - INFO - 127.0.0.1 - - [08/May/2026 22:34:58] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:34:58 - INFO - 127.0.0.1 - - [08/May/2026 22:34:58] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:34:58 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:34:58 - INFO - 127.0.0.1 - - [08/May/2026 22:34:58] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:34:58 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:34:58 - INFO - 127.0.0.1 - - [08/May/2026 22:34:58] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:35:02 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:02 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:02 - INFO - 127.0.0.1 - - [08/May/2026 22:35:02] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:02 - INFO - 127.0.0.1 - - [08/May/2026 22:35:02] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:02 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:02 - INFO - 127.0.0.1 - - [08/May/2026 22:35:02] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:02 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:02 - INFO - 127.0.0.1 - - [08/May/2026 22:35:02] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:04 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:04 - INFO - 127.0.0.1 - - [08/May/2026 22:35:04] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:04 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:04 - INFO - 127.0.0.1 - - [08/May/2026 22:35:04] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:07 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:07 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:07 - INFO - 127.0.0.1 - - [08/May/2026 22:35:07] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:07 - INFO - 127.0.0.1 - - [08/May/2026 22:35:07] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:07 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:07 - INFO - 127.0.0.1 - - [08/May/2026 22:35:07] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:07 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:07 - INFO - 127.0.0.1 - - [08/May/2026 22:35:07] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:19 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:35:19 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:35:19 - INFO - 127.0.0.1 - - [08/May/2026 22:35:19] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:35:19 - INFO - 127.0.0.1 - - [08/May/2026 22:35:19] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:35:19 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:35:19 - INFO - 127.0.0.1 - - [08/May/2026 22:35:19] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:35:19 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:35:19 - INFO - 127.0.0.1 - - [08/May/2026 22:35:19] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:35:23 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:23 - INFO - 127.0.0.1 - - [08/May/2026 22:35:23] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:23 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:23 - INFO - 127.0.0.1 - - [08/May/2026 22:35:23] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:23 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:23 - INFO - 127.0.0.1 - - [08/May/2026 22:35:23] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:23 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:23 - INFO - 127.0.0.1 - - [08/May/2026 22:35:23] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:25 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:25 - INFO - 127.0.0.1 - - [08/May/2026 22:35:25] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:25 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:25 - INFO - 127.0.0.1 - - [08/May/2026 22:35:25] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:26 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:35:26 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:35:26 - INFO - 127.0.0.1 - - [08/May/2026 22:35:26] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:35:26 - INFO - 127.0.0.1 - - [08/May/2026 22:35:26] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:35:26 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:35:26 - INFO - 127.0.0.1 - - [08/May/2026 22:35:26] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:35:26 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:35:26 - INFO - 127.0.0.1 - - [08/May/2026 22:35:26] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:35:27 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:27 - INFO - 127.0.0.1 - - [08/May/2026 22:35:27] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:27 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:35:27 - INFO - 127.0.0.1 - - [08/May/2026 22:35:27] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:35:28 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:35:28 - INFO - 127.0.0.1 - - [08/May/2026 22:35:28] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:35:28 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:35:28 - INFO - 127.0.0.1 - - [08/May/2026 22:35:28] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:36:19 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:36:19 - INFO - 127.0.0.1 - - [08/May/2026 22:36:19] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:36:19 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:36:19 - INFO - 127.0.0.1 - - [08/May/2026 22:36:19] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:36:19 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:36:19 - INFO - 127.0.0.1 - - [08/May/2026 22:36:19] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:36:19 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-08 22:36:19 - INFO - 127.0.0.1 - - [08/May/2026 22:36:19] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-08 22:36:21 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:36:21 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:36:21 - INFO - 127.0.0.1 - - [08/May/2026 22:36:21] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:36:21 - INFO - 127.0.0.1 - - [08/May/2026 22:36:21] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:36:21 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:36:21 - INFO - 127.0.0.1 - - [08/May/2026 22:36:21] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:36:21 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-08 22:36:21 - INFO - 127.0.0.1 - - [08/May/2026 22:36:21] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-08 22:45:46 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/routes/users/dashboard/dashboardRoute.py', reloading
+2026-05-08 22:45:47 - INFO -  * Restarting with stat
+2026-05-08 23:28:14 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://10.1.10.201:3001
+2026-05-08 23:28:14 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-08 23:28:14 - INFO -  * Restarting with stat
+2026-05-08 23:28:17 - WARNING -  * Debugger is active!
+2026-05-08 23:28:17 - INFO -  * Debugger PIN: 489-871-038
+2026-05-08 23:36:08 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/routes/users/dashboard/dashboardRoute.py', reloading
+2026-05-08 23:36:09 - INFO -  * Restarting with stat
+2026-05-08 23:36:13 - WARNING -  * Debugger is active!
+2026-05-08 23:36:13 - INFO -  * Debugger PIN: 489-871-038
+2026-05-08 23:36:41 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/routes/users/dashboard/dashboardRoute.py', reloading
+2026-05-08 23:36:42 - INFO -  * Restarting with stat
+2026-05-08 23:36:46 - WARNING -  * Debugger is active!
+2026-05-08 23:36:46 - INFO -  * Debugger PIN: 489-871-038
+2026-05-08 23:36:49 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/routes/users/dashboard/dashboardRoute.py', reloading
+2026-05-08 23:36:50 - INFO -  * Restarting with stat
+2026-05-08 23:36:53 - WARNING -  * Debugger is active!
+2026-05-08 23:36:53 - INFO -  * Debugger PIN: 489-871-038
+2026-05-08 23:38:57 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-08 23:38:57 - INFO -  * Restarting with stat
+2026-05-08 23:39:01 - WARNING -  * Debugger is active!
+2026-05-08 23:39:01 - INFO -  * Debugger PIN: 489-871-038
+2026-05-08 23:57:45 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-08 23:57:45 - INFO - 127.0.0.1 - - [08/May/2026 23:57:45] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-08 23:57:45 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-08 23:57:45 - INFO - 127.0.0.1 - - [08/May/2026 23:57:45] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-08 23:57:53 - INFO - Request: OPTIONS /single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-08 23:57:53 - WARNING - 404 Error: User tried to access /single-download/69e28b24d6cdab2b381b9681
+2026-05-08 23:57:53 - INFO - 127.0.0.1 - - [08/May/2026 23:57:53] "[33mOPTIONS /single-download/69e28b24d6cdab2b381b9681 HTTP/1.1[0m" 404 -
+2026-05-08 23:58:01 - INFO - Request: OPTIONS /single-download/69dbf8865d74bdbbc9a2a63f - IP: 127.0.0.1
+2026-05-08 23:58:01 - WARNING - 404 Error: User tried to access /single-download/69dbf8865d74bdbbc9a2a63f
+2026-05-08 23:58:01 - INFO - 127.0.0.1 - - [08/May/2026 23:58:01] "[33mOPTIONS /single-download/69dbf8865d74bdbbc9a2a63f HTTP/1.1[0m" 404 -
+2026-05-08 23:59:35 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/routes/users/dashboard/dashboardRoute.py', reloading
+2026-05-08 23:59:36 - INFO -  * Restarting with stat
+2026-05-08 23:59:40 - WARNING -  * Debugger is active!
+2026-05-08 23:59:40 - INFO -  * Debugger PIN: 489-871-038
+2026-05-08 23:59:46 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-08 23:59:46 - INFO - 127.0.0.1 - - [08/May/2026 23:59:46] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-08 23:59:46 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-08 23:59:47 - INFO - 127.0.0.1 - - [08/May/2026 23:59:47] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-08 23:59:52 - INFO - Request: OPTIONS /single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-08 23:59:52 - WARNING - 404 Error: User tried to access /single-download/69e28b24d6cdab2b381b9681
+2026-05-08 23:59:52 - INFO - 127.0.0.1 - - [08/May/2026 23:59:52] "[33mOPTIONS /single-download/69e28b24d6cdab2b381b9681 HTTP/1.1[0m" 404 -
+2026-05-08 23:59:58 - INFO - Request: OPTIONS /single-download/69dbf8865d74bdbbc9a2a63f - IP: 127.0.0.1
+2026-05-08 23:59:58 - WARNING - 404 Error: User tried to access /single-download/69dbf8865d74bdbbc9a2a63f
+2026-05-08 23:59:58 - INFO - 127.0.0.1 - - [08/May/2026 23:59:58] "[33mOPTIONS /single-download/69dbf8865d74bdbbc9a2a63f HTTP/1.1[0m" 404 -
+2026-05-09 00:01:55 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/routes/users/dashboard/dashboardRoute.py', reloading
+2026-05-09 00:01:56 - INFO -  * Restarting with stat
+2026-05-09 00:02:00 - WARNING -  * Debugger is active!
+2026-05-09 00:02:00 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:02:05 - INFO - Request: OPTIONS /single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:02:05 - WARNING - 404 Error: User tried to access /single-download/69e28b24d6cdab2b381b9681
+2026-05-09 00:02:05 - INFO - 127.0.0.1 - - [09/May/2026 00:02:05] "[33mOPTIONS /single-download/69e28b24d6cdab2b381b9681 HTTP/1.1[0m" 404 -
+2026-05-09 00:02:47 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:02:47 - INFO - 127.0.0.1 - - [09/May/2026 00:02:47] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:02:47 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:02:47 - INFO - 127.0.0.1 - - [09/May/2026 00:02:47] "[35m[1mGET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1[0m" 500 -
+2026-05-09 00:03:11 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://10.1.10.201:3001
+2026-05-09 00:03:11 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-09 00:03:11 - INFO -  * Restarting with stat
+2026-05-09 00:03:14 - WARNING -  * Debugger is active!
+2026-05-09 00:03:14 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:03:22 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/routes/users/dashboard/dashboardRoute.py', reloading
+2026-05-09 00:03:23 - INFO -  * Restarting with stat
+2026-05-09 00:03:26 - WARNING -  * Debugger is active!
+2026-05-09 00:03:26 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:03:28 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:03:28 - INFO - 127.0.0.1 - - [09/May/2026 00:03:28] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:03:28 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:03:28 - INFO - 127.0.0.1 - - [09/May/2026 00:03:28] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:03:33 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:03:33 - INFO - 127.0.0.1 - - [09/May/2026 00:03:33] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:03:33 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:03:33 - INFO - 127.0.0.1 - - [09/May/2026 00:03:33] "[35m[1mGET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1[0m" 500 -
+2026-05-09 00:07:47 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/routes/users/dashboard/dashboardRoute.py', reloading
+2026-05-09 00:07:48 - INFO -  * Restarting with stat
+2026-05-09 00:07:52 - WARNING -  * Debugger is active!
+2026-05-09 00:07:52 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:07:59 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:07:59 - INFO - 127.0.0.1 - - [09/May/2026 00:07:59] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:07:59 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:07:59 - INFO - 127.0.0.1 - - [09/May/2026 00:07:59] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:13:03 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:13:04 - INFO -  * Restarting with stat
+2026-05-09 00:13:08 - WARNING -  * Debugger is active!
+2026-05-09 00:13:08 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:13:19 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:13:19 - INFO - 127.0.0.1 - - [09/May/2026 00:13:19] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:13:19 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:13:19 - INFO - 127.0.0.1 - - [09/May/2026 00:13:19] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:13:21 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:13:21 - INFO - 127.0.0.1 - - [09/May/2026 00:13:21] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:13:21 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:13:21 - INFO - 127.0.0.1 - - [09/May/2026 00:13:21] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:14:32 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:14:33 - INFO -  * Restarting with stat
+2026-05-09 00:14:36 - WARNING -  * Debugger is active!
+2026-05-09 00:14:36 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:14:36 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:14:36 - INFO - 127.0.0.1 - - [09/May/2026 00:14:36] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:14:36 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:14:36 - INFO - 127.0.0.1 - - [09/May/2026 00:14:36] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:15:19 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:15:20 - INFO -  * Restarting with stat
+2026-05-09 00:15:23 - WARNING -  * Debugger is active!
+2026-05-09 00:15:23 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:16:43 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:16:44 - INFO -  * Restarting with stat
+2026-05-09 00:16:47 - WARNING -  * Debugger is active!
+2026-05-09 00:16:47 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:16:47 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:16:47 - INFO - 127.0.0.1 - - [09/May/2026 00:16:47] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:16:47 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:16:47 - INFO - 127.0.0.1 - - [09/May/2026 00:16:47] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:19:05 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:19:06 - INFO -  * Restarting with stat
+2026-05-09 00:19:11 - WARNING -  * Debugger is active!
+2026-05-09 00:19:11 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:21:54 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:21:55 - INFO -  * Restarting with stat
+2026-05-09 00:21:58 - WARNING -  * Debugger is active!
+2026-05-09 00:21:58 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:22:09 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/usersDatabase.py', reloading
+2026-05-09 00:22:10 - INFO -  * Restarting with stat
+2026-05-09 00:22:13 - WARNING -  * Debugger is active!
+2026-05-09 00:22:13 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:22:24 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:22:24 - INFO - 127.0.0.1 - - [09/May/2026 00:22:24] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:22:24 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:22:24 - INFO - 127.0.0.1 - - [09/May/2026 00:22:24] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:22:29 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:22:29 - INFO - 127.0.0.1 - - [09/May/2026 00:22:29] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:22:29 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:22:29 - INFO - 127.0.0.1 - - [09/May/2026 00:22:29] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:29:22 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:29:23 - INFO -  * Restarting with stat
+2026-05-09 00:29:27 - WARNING -  * Debugger is active!
+2026-05-09 00:29:27 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:31:57 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/usersDatabase.py', reloading
+2026-05-09 00:31:58 - INFO -  * Restarting with stat
+2026-05-09 00:32:01 - WARNING -  * Debugger is active!
+2026-05-09 00:32:01 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:32:28 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:32:29 - INFO -  * Restarting with stat
+2026-05-09 00:32:32 - WARNING -  * Debugger is active!
+2026-05-09 00:32:32 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:32:36 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:32:36 - INFO - 127.0.0.1 - - [09/May/2026 00:32:36] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:32:36 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:32:36 - INFO - 127.0.0.1 - - [09/May/2026 00:32:36] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:32:38 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:32:38 - INFO - 127.0.0.1 - - [09/May/2026 00:32:38] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:32:38 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:32:38 - INFO - 127.0.0.1 - - [09/May/2026 00:32:38] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:33:15 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:33:16 - INFO -  * Restarting with stat
+2026-05-09 00:33:19 - WARNING -  * Debugger is active!
+2026-05-09 00:33:19 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:33:37 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:33:37 - INFO - 127.0.0.1 - - [09/May/2026 00:33:37] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:33:37 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:33:37 - INFO - 127.0.0.1 - - [09/May/2026 00:33:37] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:33:46 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:33:46 - INFO - 127.0.0.1 - - [09/May/2026 00:33:46] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:33:46 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:33:46 - INFO - 127.0.0.1 - - [09/May/2026 00:33:46] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:34:14 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:34:15 - INFO -  * Restarting with stat
+2026-05-09 00:34:19 - WARNING -  * Debugger is active!
+2026-05-09 00:34:19 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:34:29 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:34:29 - INFO - 127.0.0.1 - - [09/May/2026 00:34:29] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:34:29 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:34:29 - INFO - 127.0.0.1 - - [09/May/2026 00:34:29] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:35:06 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:35:07 - INFO -  * Restarting with stat
+2026-05-09 00:35:10 - WARNING -  * Debugger is active!
+2026-05-09 00:35:10 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:35:10 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:35:10 - INFO - 127.0.0.1 - - [09/May/2026 00:35:10] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:35:10 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:35:10 - INFO - 127.0.0.1 - - [09/May/2026 00:35:10] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:35:33 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:35:34 - INFO -  * Restarting with stat
+2026-05-09 00:35:37 - WARNING -  * Debugger is active!
+2026-05-09 00:35:37 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:35:37 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:35:37 - INFO - 127.0.0.1 - - [09/May/2026 00:35:37] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:35:37 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:35:37 - INFO - 127.0.0.1 - - [09/May/2026 00:35:37] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:36:12 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:36:13 - INFO -  * Restarting with stat
+2026-05-09 00:36:17 - WARNING -  * Debugger is active!
+2026-05-09 00:36:17 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:36:21 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:36:21 - INFO - 127.0.0.1 - - [09/May/2026 00:36:21] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:36:21 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:36:21 - INFO - 127.0.0.1 - - [09/May/2026 00:36:21] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:36:49 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/usersDatabase.py', reloading
+2026-05-09 00:36:50 - INFO -  * Restarting with stat
+2026-05-09 00:36:54 - WARNING -  * Debugger is active!
+2026-05-09 00:36:54 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:36:57 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:36:57 - INFO - 127.0.0.1 - - [09/May/2026 00:36:57] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:36:57 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:36:57 - INFO - 127.0.0.1 - - [09/May/2026 00:36:57] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:37:24 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:37:25 - INFO -  * Restarting with stat
+2026-05-09 00:37:28 - WARNING -  * Debugger is active!
+2026-05-09 00:37:28 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:37:28 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:37:28 - INFO - 127.0.0.1 - - [09/May/2026 00:37:28] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:37:28 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:37:28 - INFO - 127.0.0.1 - - [09/May/2026 00:37:28] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:38:19 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:38:20 - INFO -  * Restarting with stat
+2026-05-09 00:38:23 - WARNING -  * Debugger is active!
+2026-05-09 00:38:23 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:39:02 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:39:03 - INFO -  * Restarting with stat
+2026-05-09 00:39:06 - WARNING -  * Debugger is active!
+2026-05-09 00:39:06 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:39:09 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:39:09 - INFO - 127.0.0.1 - - [09/May/2026 00:39:09] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:39:09 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:39:09 - INFO - 127.0.0.1 - - [09/May/2026 00:39:09] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:39:26 - INFO - Request: OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:39:26 - INFO - 127.0.0.1 - - [09/May/2026 00:39:26] "OPTIONS /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:39:26 - INFO - Request: GET /dashboard/single-download/69e28b24d6cdab2b381b9681 - IP: 127.0.0.1
+2026-05-09 00:39:26 - INFO - 127.0.0.1 - - [09/May/2026 00:39:26] "GET /dashboard/single-download/69e28b24d6cdab2b381b9681 HTTP/1.1" 200 -
+2026-05-09 00:42:18 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:42:19 - INFO -  * Restarting with stat
+2026-05-09 00:42:23 - WARNING -  * Debugger is active!
+2026-05-09 00:42:23 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:42:37 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:42:38 - INFO -  * Restarting with stat
+2026-05-09 00:42:41 - WARNING -  * Debugger is active!
+2026-05-09 00:42:41 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:45:02 - INFO - Request: OPTIONS /dashboard/single-download/69dbf8865d74bdbbc9a2a63f - IP: 127.0.0.1
+2026-05-09 00:45:02 - INFO - 127.0.0.1 - - [09/May/2026 00:45:02] "OPTIONS /dashboard/single-download/69dbf8865d74bdbbc9a2a63f HTTP/1.1" 200 -
+2026-05-09 00:45:02 - INFO - Request: GET /dashboard/single-download/69dbf8865d74bdbbc9a2a63f - IP: 127.0.0.1
+2026-05-09 00:45:02 - INFO - 127.0.0.1 - - [09/May/2026 00:45:02] "GET /dashboard/single-download/69dbf8865d74bdbbc9a2a63f HTTP/1.1" 200 -
+2026-05-09 00:45:54 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:45:54 - INFO - 127.0.0.1 - - [09/May/2026 00:45:54] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:45:54 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:45:54 - INFO - 127.0.0.1 - - [09/May/2026 00:45:54] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:45:57 - INFO - Request: OPTIONS /dashboard/single-download/69dbf8865d74bdbbc9a2a63f - IP: 127.0.0.1
+2026-05-09 00:45:57 - INFO - 127.0.0.1 - - [09/May/2026 00:45:57] "OPTIONS /dashboard/single-download/69dbf8865d74bdbbc9a2a63f HTTP/1.1" 200 -
+2026-05-09 00:45:57 - INFO - Request: GET /dashboard/single-download/69dbf8865d74bdbbc9a2a63f - IP: 127.0.0.1
+2026-05-09 00:45:57 - INFO - 127.0.0.1 - - [09/May/2026 00:45:57] "GET /dashboard/single-download/69dbf8865d74bdbbc9a2a63f HTTP/1.1" 200 -
+2026-05-09 00:47:26 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:47:27 - INFO -  * Restarting with stat
+2026-05-09 00:47:31 - WARNING -  * Debugger is active!
+2026-05-09 00:47:31 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:47:57 - INFO -  * Detected change in '/Users/mbonuchinedum/Documents/Projects/Thumbprint-Analysis/backend/database/users/downloadUsersData.py', reloading
+2026-05-09 00:47:58 - INFO -  * Restarting with stat
+2026-05-09 00:48:01 - WARNING -  * Debugger is active!
+2026-05-09 00:48:01 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 00:50:08 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-05-09 00:50:08 - INFO - 127.0.0.1 - - [09/May/2026 00:50:08] "OPTIONS /login HTTP/1.1" 200 -
+2026-05-09 00:50:09 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-05-09 00:50:09 - INFO - 127.0.0.1 - - [09/May/2026 00:50:09] "POST /login HTTP/1.1" 200 -
+2026-05-09 00:50:09 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:50:09 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:50:09 - INFO - 127.0.0.1 - - [09/May/2026 00:50:09] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:50:09 - INFO - 127.0.0.1 - - [09/May/2026 00:50:09] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:50:09 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:50:09 - INFO - 127.0.0.1 - - [09/May/2026 00:50:09] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:50:09 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:50:09 - INFO - 127.0.0.1 - - [09/May/2026 00:50:09] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:50:12 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:50:12 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:50:12 - INFO - 127.0.0.1 - - [09/May/2026 00:50:12] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:50:12 - INFO - 127.0.0.1 - - [09/May/2026 00:50:12] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:50:12 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:50:12 - INFO - 127.0.0.1 - - [09/May/2026 00:50:12] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:50:12 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:50:12 - INFO - 127.0.0.1 - - [09/May/2026 00:50:12] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:50:13 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:50:13 - INFO - 127.0.0.1 - - [09/May/2026 00:50:13] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:50:13 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:50:13 - INFO - 127.0.0.1 - - [09/May/2026 00:50:13] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:50:24 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:50:24 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:50:24 - INFO - 127.0.0.1 - - [09/May/2026 00:50:24] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:50:24 - INFO - 127.0.0.1 - - [09/May/2026 00:50:24] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:50:24 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:50:24 - INFO - 127.0.0.1 - - [09/May/2026 00:50:24] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:50:24 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:50:24 - INFO - 127.0.0.1 - - [09/May/2026 00:50:24] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:50:41 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:50:41 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:50:41 - INFO - 127.0.0.1 - - [09/May/2026 00:50:41] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:50:41 - INFO - 127.0.0.1 - - [09/May/2026 00:50:41] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:50:41 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:50:41 - INFO - 127.0.0.1 - - [09/May/2026 00:50:41] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:50:41 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:50:41 - INFO - 127.0.0.1 - - [09/May/2026 00:50:41] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:51:43 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:51:43 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:51:43 - INFO - 127.0.0.1 - - [09/May/2026 00:51:43] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:51:43 - INFO - 127.0.0.1 - - [09/May/2026 00:51:43] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:51:43 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:51:43 - INFO - 127.0.0.1 - - [09/May/2026 00:51:43] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:51:43 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:51:43 - INFO - 127.0.0.1 - - [09/May/2026 00:51:43] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:52:20 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 00:52:20 - INFO - 127.0.0.1 - - [09/May/2026 00:52:20] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 00:52:20 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 00:52:21 - INFO - 127.0.0.1 - - [09/May/2026 00:52:21] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 00:52:29 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 00:52:29 - INFO - 127.0.0.1 - - [09/May/2026 00:52:29] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 00:52:29 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 00:52:30 - INFO - 127.0.0.1 - - [09/May/2026 00:52:30] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 00:52:35 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:52:35 - INFO - 127.0.0.1 - - [09/May/2026 00:52:35] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:52:35 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:52:35 - INFO - 127.0.0.1 - - [09/May/2026 00:52:35] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:52:35 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:52:36 - INFO - 127.0.0.1 - - [09/May/2026 00:52:36] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:52:36 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:52:36 - INFO - 127.0.0.1 - - [09/May/2026 00:52:36] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:52:46 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-05-09 00:52:46 - INFO - 127.0.0.1 - - [09/May/2026 00:52:46] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 00:52:46 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 00:52:46 - INFO - 127.0.0.1 - - [09/May/2026 00:52:46] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 00:52:53 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-05-09 00:52:53 - INFO - 127.0.0.1 - - [09/May/2026 00:52:53] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 00:52:53 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 00:52:53 - INFO - 127.0.0.1 - - [09/May/2026 00:52:53] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 00:53:01 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:53:01 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:53:01 - INFO - 127.0.0.1 - - [09/May/2026 00:53:01] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:53:01 - INFO - 127.0.0.1 - - [09/May/2026 00:53:01] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:53:01 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:53:01 - INFO - 127.0.0.1 - - [09/May/2026 00:53:01] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:53:01 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:53:01 - INFO - 127.0.0.1 - - [09/May/2026 00:53:01] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:54:25 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 00:54:25 - INFO - 127.0.0.1 - - [09/May/2026 00:54:25] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 00:54:25 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 00:54:25 - INFO - 127.0.0.1 - - [09/May/2026 00:54:25] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 00:54:37 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:54:37 - INFO - 127.0.0.1 - - [09/May/2026 00:54:37] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:54:37 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 00:54:37 - INFO - 127.0.0.1 - - [09/May/2026 00:54:37] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 00:54:50 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 00:54:50 - INFO - 127.0.0.1 - - [09/May/2026 00:54:50] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 00:54:50 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 00:54:50 - INFO - 127.0.0.1 - - [09/May/2026 00:54:50] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 00:55:15 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 00:55:15 - INFO - 127.0.0.1 - - [09/May/2026 00:55:15] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 00:55:15 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 00:55:15 - INFO - 127.0.0.1 - - [09/May/2026 00:55:15] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 00:55:21 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:55:21 - INFO - 127.0.0.1 - - [09/May/2026 00:55:21] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:55:21 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:55:21 - INFO - 127.0.0.1 - - [09/May/2026 00:55:21] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:55:21 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:55:21 - INFO - 127.0.0.1 - - [09/May/2026 00:55:21] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:55:21 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 00:55:21 - INFO - 127.0.0.1 - - [09/May/2026 00:55:21] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 00:55:25 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-05-09 00:55:25 - INFO - 127.0.0.1 - - [09/May/2026 00:55:25] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 00:55:25 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 00:55:25 - INFO - 127.0.0.1 - - [09/May/2026 00:55:25] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 00:55:30 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 00:55:30 - INFO - 127.0.0.1 - - [09/May/2026 00:55:30] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 00:55:35 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-05-09 00:55:35 - INFO - 127.0.0.1 - - [09/May/2026 00:55:35] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 00:55:35 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 00:55:35 - INFO - 127.0.0.1 - - [09/May/2026 00:55:35] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 00:55:38 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 00:55:38 - INFO - 127.0.0.1 - - [09/May/2026 00:55:38] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 00:55:42 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-05-09 00:55:42 - INFO - 127.0.0.1 - - [09/May/2026 00:55:42] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 00:55:42 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 00:55:42 - INFO - 127.0.0.1 - - [09/May/2026 00:55:42] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 01:01:10 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://10.1.10.201:3001
+2026-05-09 01:01:10 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-09 01:01:10 - INFO -  * Restarting with stat
+2026-05-09 01:01:12 - WARNING -  * Debugger is active!
+2026-05-09 01:01:12 - INFO -  * Debugger PIN: 489-871-038
+2026-05-09 01:01:34 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-05-09 01:01:34 - INFO - 127.0.0.1 - - [09/May/2026 01:01:34] "OPTIONS /login HTTP/1.1" 200 -
+2026-05-09 01:01:34 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-05-09 01:01:34 - INFO - 127.0.0.1 - - [09/May/2026 01:01:34] "POST /login HTTP/1.1" 200 -
+2026-05-09 01:01:34 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:01:34 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:01:34 - INFO - 127.0.0.1 - - [09/May/2026 01:01:34] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:01:34 - INFO - 127.0.0.1 - - [09/May/2026 01:01:34] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:01:34 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:01:34 - INFO - 127.0.0.1 - - [09/May/2026 01:01:34] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:01:34 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:01:34 - INFO - 127.0.0.1 - - [09/May/2026 01:01:34] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:01:46 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 01:01:46 - INFO - 127.0.0.1 - - [09/May/2026 01:01:46] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 01:01:46 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 01:01:46 - INFO - 127.0.0.1 - - [09/May/2026 01:01:46] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 01:03:28 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:03:28 - INFO - 127.0.0.1 - - [09/May/2026 01:03:28] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:03:28 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:03:28 - INFO - 127.0.0.1 - - [09/May/2026 01:03:28] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:03:28 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:03:28 - INFO - 127.0.0.1 - - [09/May/2026 01:03:28] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:03:28 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:03:28 - INFO - 127.0.0.1 - - [09/May/2026 01:03:28] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:03:31 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-05-09 01:03:31 - INFO - 127.0.0.1 - - [09/May/2026 01:03:31] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 01:03:31 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 01:03:32 - INFO - 127.0.0.1 - - [09/May/2026 01:03:32] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 01:03:34 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:03:34 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:03:34 - INFO - 127.0.0.1 - - [09/May/2026 01:03:34] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:03:34 - INFO - 127.0.0.1 - - [09/May/2026 01:03:34] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:03:34 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:03:34 - INFO - 127.0.0.1 - - [09/May/2026 01:03:34] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:03:34 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:03:34 - INFO - 127.0.0.1 - - [09/May/2026 01:03:34] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:04:25 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 01:04:25 - INFO - 127.0.0.1 - - [09/May/2026 01:04:25] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 01:04:25 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 01:04:25 - INFO - 127.0.0.1 - - [09/May/2026 01:04:25] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 01:04:35 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 01:04:35 - INFO - 127.0.0.1 - - [09/May/2026 01:04:35] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 01:04:35 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 01:04:36 - INFO - 127.0.0.1 - - [09/May/2026 01:04:36] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 01:04:44 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 01:04:44 - INFO - 127.0.0.1 - - [09/May/2026 01:04:44] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 01:04:44 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 01:04:44 - INFO - 127.0.0.1 - - [09/May/2026 01:04:44] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 01:04:57 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 01:04:57 - INFO - 127.0.0.1 - - [09/May/2026 01:04:57] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 01:04:57 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 01:04:57 - INFO - 127.0.0.1 - - [09/May/2026 01:04:57] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 01:05:11 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 01:05:11 - INFO - 127.0.0.1 - - [09/May/2026 01:05:11] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 01:05:11 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 01:05:11 - INFO - 127.0.0.1 - - [09/May/2026 01:05:11] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 01:06:18 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 01:06:18 - INFO - 127.0.0.1 - - [09/May/2026 01:06:18] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 01:06:18 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 01:06:18 - INFO - 127.0.0.1 - - [09/May/2026 01:06:18] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 01:06:51 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:06:51 - INFO - 127.0.0.1 - - [09/May/2026 01:06:51] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:06:51 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:06:51 - INFO - 127.0.0.1 - - [09/May/2026 01:06:51] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:06:58 - INFO - Request: OPTIONS /dashboard - IP: 127.0.0.1
+2026-05-09 01:06:58 - INFO - 127.0.0.1 - - [09/May/2026 01:06:58] "OPTIONS /dashboard HTTP/1.1" 200 -
+2026-05-09 01:06:58 - INFO - Request: POST /dashboard - IP: 127.0.0.1
+2026-05-09 01:06:58 - DEBUG - Importing AvifImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing BlpImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing BmpImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing BufrStubImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing CurImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing DcxImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing DdsImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing EpsImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing FitsImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing FliImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing FpxImagePlugin
+2026-05-09 01:06:58 - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2026-05-09 01:06:58 - DEBUG - Importing FtexImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing GbrImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing GifImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing GribStubImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing Hdf5StubImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing IcnsImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing IcoImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing ImImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing ImtImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing IptcImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing JpegImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing Jpeg2KImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing McIdasImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing MicImagePlugin
+2026-05-09 01:06:58 - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2026-05-09 01:06:58 - DEBUG - Importing MpegImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing MpoImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing MspImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing PalmImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing PcdImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing PcxImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing PdfImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing PixarImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing PngImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing PpmImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing PsdImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing QoiImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing SgiImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing SpiderImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing SunImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing TgaImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing TiffImagePlugin
+2026-05-09 01:06:58 - DEBUG - Importing WebPImagePlugin
+2026-05-09 01:06:59 - DEBUG - Importing WmfImagePlugin
+2026-05-09 01:06:59 - DEBUG - Importing XbmImagePlugin
+2026-05-09 01:06:59 - DEBUG - Importing XpmImagePlugin
+2026-05-09 01:06:59 - DEBUG - Importing XVThumbImagePlugin
+2026-05-09 01:06:59 - INFO - 127.0.0.1 - - [09/May/2026 01:06:59] "POST /dashboard HTTP/1.1" 200 -
+2026-05-09 01:34:23 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:34:23 - INFO - 127.0.0.1 - - [09/May/2026 01:34:23] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:34:23 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:34:23 - INFO - 127.0.0.1 - - [09/May/2026 01:34:23] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:34:23 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:34:23 - INFO - 127.0.0.1 - - [09/May/2026 01:34:23] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:34:23 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:34:23 - INFO - 127.0.0.1 - - [09/May/2026 01:34:23] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:34:28 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-05-09 01:34:28 - INFO - 127.0.0.1 - - [09/May/2026 01:34:28] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 01:34:28 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 01:34:28 - INFO - 127.0.0.1 - - [09/May/2026 01:34:28] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 01:34:33 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 01:34:33 - INFO - 127.0.0.1 - - [09/May/2026 01:34:33] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 01:34:38 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-05-09 01:34:38 - INFO - 127.0.0.1 - - [09/May/2026 01:34:38] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 01:34:38 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 01:34:38 - INFO - 127.0.0.1 - - [09/May/2026 01:34:38] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 01:34:42 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 01:34:42 - INFO - 127.0.0.1 - - [09/May/2026 01:34:42] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 01:34:47 - INFO - Request: OPTIONS /dashboard/delete - IP: 127.0.0.1
+2026-05-09 01:34:47 - INFO - 127.0.0.1 - - [09/May/2026 01:34:47] "OPTIONS /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 01:34:47 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 01:34:47 - INFO - 127.0.0.1 - - [09/May/2026 01:34:47] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 01:34:51 - INFO - Request: DELETE /dashboard/delete - IP: 127.0.0.1
+2026-05-09 01:34:51 - INFO - 127.0.0.1 - - [09/May/2026 01:34:51] "DELETE /dashboard/delete HTTP/1.1" 200 -
+2026-05-09 01:35:06 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:35:06 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:35:06 - INFO - 127.0.0.1 - - [09/May/2026 01:35:06] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:35:06 - INFO - 127.0.0.1 - - [09/May/2026 01:35:06] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:35:06 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:35:06 - INFO - 127.0.0.1 - - [09/May/2026 01:35:06] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:35:06 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:35:06 - INFO - 127.0.0.1 - - [09/May/2026 01:35:06] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:35:08 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:35:08 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:35:08 - INFO - 127.0.0.1 - - [09/May/2026 01:35:08] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:35:08 - INFO - 127.0.0.1 - - [09/May/2026 01:35:08] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:35:08 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:35:08 - INFO - 127.0.0.1 - - [09/May/2026 01:35:08] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:35:08 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:35:08 - INFO - 127.0.0.1 - - [09/May/2026 01:35:08] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:35:09 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:35:09 - INFO - 127.0.0.1 - - [09/May/2026 01:35:09] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:35:09 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:35:09 - INFO - 127.0.0.1 - - [09/May/2026 01:35:09] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:35:11 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:35:11 - INFO - 127.0.0.1 - - [09/May/2026 01:35:11] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:35:11 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-09 01:35:11 - INFO - 127.0.0.1 - - [09/May/2026 01:35:11] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-09 01:35:12 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:35:12 - INFO - 127.0.0.1 - - [09/May/2026 01:35:12] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-09 01:35:12 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-09 01:35:12 - INFO - 127.0.0.1 - - [09/May/2026 01:35:12] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:09:25 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://172.20.10.2:3001
+2026-05-16 18:09:25 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-16 18:09:25 - INFO -  * Restarting with stat
+2026-05-16 18:09:29 - WARNING -  * Debugger is active!
+2026-05-16 18:09:29 - INFO -  * Debugger PIN: 133-917-514
+2026-05-16 18:09:59 - INFO - Request: OPTIONS /login - IP: 127.0.0.1
+2026-05-16 18:09:59 - INFO - 127.0.0.1 - - [16/May/2026 18:09:59] "OPTIONS /login HTTP/1.1" 200 -
+2026-05-16 18:09:59 - INFO - Request: POST /login - IP: 127.0.0.1
+2026-05-16 18:09:59 - INFO - 127.0.0.1 - - [16/May/2026 18:09:59] "POST /login HTTP/1.1" 200 -
+2026-05-16 18:09:59 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:09:59 - INFO - 127.0.0.1 - - [16/May/2026 18:09:59] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:09:59 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:09:59 - INFO - 127.0.0.1 - - [16/May/2026 18:09:59] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:09:59 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:09:59 - INFO - 127.0.0.1 - - [16/May/2026 18:09:59] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:09:59 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:09:59 - INFO - 127.0.0.1 - - [16/May/2026 18:09:59] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:03 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-16 18:10:03 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-16 18:10:03 - INFO - 127.0.0.1 - - [16/May/2026 18:10:03] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:10:03 - INFO - 127.0.0.1 - - [16/May/2026 18:10:03] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:10:03 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-16 18:10:03 - INFO - 127.0.0.1 - - [16/May/2026 18:10:03] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:10:03 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-16 18:10:03 - INFO - 127.0.0.1 - - [16/May/2026 18:10:03] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:10:05 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:05 - INFO - 127.0.0.1 - - [16/May/2026 18:10:05] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:05 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:05 - INFO - 127.0.0.1 - - [16/May/2026 18:10:05] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:05 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:05 - INFO - 127.0.0.1 - - [16/May/2026 18:10:05] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:05 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:05 - INFO - 127.0.0.1 - - [16/May/2026 18:10:05] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:08 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:08 - INFO - 127.0.0.1 - - [16/May/2026 18:10:08] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:08 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:08 - INFO - 127.0.0.1 - - [16/May/2026 18:10:08] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:11 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-16 18:10:11 - INFO - 127.0.0.1 - - [16/May/2026 18:10:11] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:10:11 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-16 18:10:11 - INFO - 127.0.0.1 - - [16/May/2026 18:10:11] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:10:11 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-16 18:10:11 - INFO - 127.0.0.1 - - [16/May/2026 18:10:11] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:10:11 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-16 18:10:11 - INFO - 127.0.0.1 - - [16/May/2026 18:10:11] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:10:13 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:13 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:13 - INFO - 127.0.0.1 - - [16/May/2026 18:10:13] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:13 - INFO - 127.0.0.1 - - [16/May/2026 18:10:13] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:13 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:13 - INFO - 127.0.0.1 - - [16/May/2026 18:10:13] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:13 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:13 - INFO - 127.0.0.1 - - [16/May/2026 18:10:13] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:15 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:15 - INFO - 127.0.0.1 - - [16/May/2026 18:10:15] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:15 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:15 - INFO - 127.0.0.1 - - [16/May/2026 18:10:15] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:23 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-16 18:10:23 - INFO - Request: OPTIONS /dashboard/history - IP: 127.0.0.1
+2026-05-16 18:10:23 - INFO - 127.0.0.1 - - [16/May/2026 18:10:23] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:10:23 - INFO - 127.0.0.1 - - [16/May/2026 18:10:23] "OPTIONS /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:10:23 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-16 18:10:23 - INFO - 127.0.0.1 - - [16/May/2026 18:10:23] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:10:23 - INFO - Request: GET /dashboard/history - IP: 127.0.0.1
+2026-05-16 18:10:23 - INFO - 127.0.0.1 - - [16/May/2026 18:10:23] "GET /dashboard/history HTTP/1.1" 200 -
+2026-05-16 18:10:34 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:34 - INFO - Request: OPTIONS /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:34 - INFO - 127.0.0.1 - - [16/May/2026 18:10:34] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:34 - INFO - 127.0.0.1 - - [16/May/2026 18:10:34] "OPTIONS /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:35 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:35 - INFO - 127.0.0.1 - - [16/May/2026 18:10:35] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:35 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:35 - INFO - 127.0.0.1 - - [16/May/2026 18:10:35] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:37 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:37 - INFO - 127.0.0.1 - - [16/May/2026 18:10:37] "GET /dashboard/profile HTTP/1.1" 200 -
+2026-05-16 18:10:37 - INFO - Request: GET /dashboard/profile - IP: 127.0.0.1
+2026-05-16 18:10:37 - INFO - 127.0.0.1 - - [16/May/2026 18:10:37] "GET /dashboard/profile HTTP/1.1" 200 -
